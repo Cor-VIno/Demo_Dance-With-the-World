@@ -1,4 +1,4 @@
-using System.Collections;
+锘縰sing System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -20,8 +20,8 @@ public class PlayerMovement : MonoBehaviour
     [Header("Ground Check")]
     public float playerHeight;
     public LayerMask whatIsGround;
-    public bool isGrounded;
-    //玩家的方向
+    bool isGrounded;
+    
     public Transform orientation;
 
     float horizontalInput;

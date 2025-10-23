@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 9111957446663961595}
   - component: {fileID: 8898272028111461791}
   - component: {fileID: 7612159049694855743}
-  - component: {fileID: 8528535361487372691}
+  - component: {fileID: 3394209073739151729}
+  - component: {fileID: 241942823183561386}
   m_Layer: 7
   m_Name: SelectableSmoothCube
   m_TagString: Magnetometric
@@ -29,8 +30,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5808269508336127046}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.5, y: 1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -125,7 +126,7 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
---- !u!114 &8528535361487372691
+--- !u!114 &3394209073739151729
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -134,7 +135,35 @@ MonoBehaviour:
   m_GameObject: {fileID: 5808269508336127046}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d113d525ffb316e429aa4a0140ef813c, type: 3}
+  m_Script: {fileID: 11500000, guid: 48d04b3afb95d9c44bf08ae2ad3ff27e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  magMode: 0
+  magMode: 1
+  canMove: 0
+--- !u!54 &241942823183561386
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5808269508336127046}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
