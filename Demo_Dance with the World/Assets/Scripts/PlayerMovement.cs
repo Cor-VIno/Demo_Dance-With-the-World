@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Ground Check")]
     public float playerHeight;
     public LayerMask whatIsGround;
-    bool isGrounded;
+    public bool isGrounded;
     //玩家的方向
     public Transform orientation;
 
@@ -61,7 +61,7 @@ public class PlayerMovement : MonoBehaviour
             Jump();
 
             Invoke(nameof(ResetJump), jumpCooldown);
-            print("Jump!");
+            //print("Jump!");
         }
     }
 
