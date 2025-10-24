@@ -9,6 +9,7 @@ public class PlayerMag : MonoBehaviour
     float width;
     float height;
 
+    //Outline outline;
     // Ray r;
     // RaycastHit hitInfo;
 
@@ -65,9 +66,23 @@ public class PlayerMag : MonoBehaviour
         height = Screen.height;
         Ray ray = Camera.main!.ScreenPointToRay(new Vector3(width / 2, height / 2, 0));
         RaycastHit raycastHit;
-        if (Physics.Raycast(ray, out raycastHit, 100, 1 << LayerMask.NameToLayer("Magnetometric")))
+        //if (Physics.Raycast(ray, out raycastHit, 100, 1 << LayerMask.NameToLayer("whatIsGround")))
+        //{
+        //    print(1);
+        //    return;
+        //}
+        if (Physics.Raycast(ray, out raycastHit, 100/*, 1 << LayerMask.NameToLayer("Magnetometric")*/))
         {
             GameObject colliderGameObject = raycastHit.collider.gameObject;
+            if (!colliderGameObject.CompareTag("Magnetometric"))
+            {
+                if (lookAtObj)
+                {
+                    lookAtObj.GetComponent<MagneticController>().NotLookingAt();
+                    lookAtObj = null;
+                }
+                return;
+            }
             if (!lookAtObj || colliderGameObject != lookAtObj)
             {
                 if (lookAtObj)

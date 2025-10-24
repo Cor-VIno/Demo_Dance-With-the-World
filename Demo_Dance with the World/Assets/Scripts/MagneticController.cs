@@ -13,10 +13,10 @@ public class MagneticController : MonoBehaviour
 {
     public E_MagMode magMode = E_MagMode.None;
     public bool canMove;
-    Outline outline;
-    Rigidbody rb;
+    protected Outline outline;
+    protected Rigidbody rb;
 
-    void Start()
+    protected void Start()
     {
         outline = GetComponent<Outline>();
         rb = GetComponent<Rigidbody>();
@@ -30,7 +30,7 @@ public class MagneticController : MonoBehaviour
         UpdateColor();
     }
 
-    void UpdateColor()
+    protected void UpdateColor()
     {
         if (magMode == E_MagMode.N)
             outline.OutlineColor = Color.red;
@@ -56,7 +56,7 @@ public class MagneticController : MonoBehaviour
         UpdateCanMove();
     }
 
-    void UpdateCanMove()
+    protected void UpdateCanMove()
     {
         rb.constraints = canMove ? RigidbodyConstraints.None : RigidbodyConstraints.FreezeAll;
     }
