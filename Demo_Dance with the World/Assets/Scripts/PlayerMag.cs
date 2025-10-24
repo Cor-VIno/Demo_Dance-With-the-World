@@ -16,32 +16,31 @@ public class PlayerMag : MonoBehaviour
     {
         public GameObject Obj;
         public float Energy;
+        public float time;
+        public float resEnergy;
 
         public TargetObj(GameObject obj, float energy)
         {
             Obj = obj;
             Energy = energy;
+            time = 0f;
+            resEnergy = energy;
         }
     }
 
-    // bool isHit;
-    // bool isAttractMove;
-    public int magneticForceBase = 3;
+
+    public float magneticForceBase = 3f;
     public float defaultEnergy = 1000f;
     GameObject lookAtObj;
 
     List<TargetObj> targetObjs = new();
+    HashSet<GameObject> contactedObjs = new();
 
-    // GameObject selectedObj;
     Rigidbody rb;
-    // MagneticController magneticController;
 
     E_MagMode[] eMagModes;
     private int selfTypeIndex = 0;
 
-    // public float attractSpeed;
-
-    // Vector3 dir;
 
     void Start()
     {
@@ -51,16 +50,8 @@ public class PlayerMag : MonoBehaviour
 
     void Update()
     {
-        // CheckHitAndDraw();
         LookObj();
         CheckAndLockObj();
-        // if (selectedObj && magneticController.magMode != E_MagMode.None) {
-        //     if (magneticController.magMode != e_MagModes[selfTypeIndex]) {
-        //         Attract();
-        //     } else {
-        //         Repul();
-        //     }
-        // }
     }
 
     private void FixedUpdate()
@@ -101,10 +92,16 @@ public class PlayerMag : MonoBehaviour
     void CheckAndLockObj()
     {
         if (Input.GetMouseButtonDown(0) && lookAtObj &&
-            lookAtObj.GetComponent<MagneticController>().magMode != E_MagMode.None)
+            lookAtObj.GetComponent<MagneticController>().magMode != E_MagMode.None &&
+            (!contactedObjs.Contains(lookAtObj) || !IsAttract(lookAtObj)))
         {
             targetObjs.Add(new TargetObj(lookAtObj, defaultEnergy));
         }
+    }
+
+    bool IsAttract(GameObject obj)
+    {
+        return obj.GetComponent<MagneticController>().magMode != eMagModes[selfTypeIndex];
     }
 
     void GenerateForce()
@@ -114,9 +111,9 @@ public class PlayerMag : MonoBehaviour
         foreach (TargetObj targetObj in targetObjs)
         {
             TargetObj newTargetObj = targetObj;
-            if (targetObj.Energy > 0)
+            if (targetObj.resEnergy > 0)
             {
-                if (targetObj.Obj.GetComponent<MagneticController>().magMode != eMagModes[selfTypeIndex])
+                if (IsAttract(targetObj.Obj))
                 {
                     Attract(targetObj);
                 }
@@ -125,10 +122,11 @@ public class PlayerMag : MonoBehaviour
                     Repul(targetObj);
                 }
 
-                newTargetObj.Energy = Mathf.Lerp(newTargetObj.Energy, 0, Time.fixedDeltaTime);
+                newTargetObj.time += Time.fixedDeltaTime;
+                newTargetObj.resEnergy = Mathf.Lerp(newTargetObj.Energy, 0, newTargetObj.time);
             }
 
-            if (newTargetObj.Energy > 0.1f)
+            if (newTargetObj.resEnergy > 0.05f)
             {
                 newTargetObjs.Add(newTargetObj);
             }
@@ -181,11 +179,11 @@ public class PlayerMag : MonoBehaviour
 
     void Attract(TargetObj targetObj)
     {
-        if (targetObj.Energy > 0)
+        if (targetObj.resEnergy > 0)
         {
             Vector3 dis = targetObj.Obj.transform.position - transform.position;
-            float force = Math.Min(magneticForceBase * targetObj.Energy / (dis.magnitude * dis.magnitude),
-                magneticForceBase * targetObj.Energy);
+            float force = Mathf.Min(Mathf.Max(Mathf.Min(magneticForceBase * targetObj.resEnergy / (dis.magnitude * dis.magnitude),
+                magneticForceBase * targetObj.resEnergy), 10f), 300f);
             rb.AddForce(dis.normalized * (1 * force), ForceMode.Force);
             targetObj.Obj.GetComponent<MagneticController>().GenerateInteractionForce(gameObject, force, true);
         }
@@ -193,11 +191,11 @@ public class PlayerMag : MonoBehaviour
 
     void Repul(TargetObj targetObj)
     {
-        if (targetObj.Energy > 0)
+        if (targetObj.resEnergy > 0)
         {
             Vector3 dis = targetObj.Obj.transform.position - transform.position;
-            float force = Math.Min(magneticForceBase * targetObj.Energy / (dis.magnitude * dis.magnitude),
-                magneticForceBase * targetObj.Energy);
+            float force = Mathf.Min(Mathf.Max(magneticForceBase * targetObj.resEnergy / (dis.magnitude * dis.magnitude * dis.magnitude), 10f),
+                magneticForceBase * targetObj.resEnergy * 0.05f);
             rb.AddForce(dis.normalized * (-1 * force), ForceMode.Force);
             targetObj.Obj.GetComponent<MagneticController>().GenerateInteractionForce(gameObject, force, false);
         }
@@ -243,6 +241,7 @@ public class PlayerMag : MonoBehaviour
         if (!collision.gameObject.CompareTag("Ground"))
         {
             List<TargetObj> newTargetObjs = new();
+            contactedObjs.Add(collision.gameObject);
 
             foreach (TargetObj targetObj in targetObjs)
             {
@@ -250,9 +249,22 @@ public class PlayerMag : MonoBehaviour
                 {
                     newTargetObjs.Add(targetObj);
                 }
+                else
+                {
+                    rb.velocity = Vector3.zero;
+                    collision.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
+                }
             }
 
             targetObjs = newTargetObjs;
+        }
+    }
+    private void OnCollisionExit(Collision collision)
+    {
+        if (!collision.gameObject.CompareTag("Ground") && contactedObjs.Contains(collision.gameObject))
+        {
+            contactedObjs.Remove(collision.gameObject);
+            
         }
     }
 }
