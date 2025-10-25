@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
     public float playerHeight;
     public LayerMask whatIsGround;
     bool isGrounded;
-    
+
     public Transform orientation;
 
     float horizontalInput;
@@ -30,10 +30,21 @@ public class PlayerMovement : MonoBehaviour
     Vector3 moveDirection;
 
     Rigidbody rb;
+
+    Animator animator;
+    public Transform cameraPos;
+    float changeAngleX;
+    float changeAngleY;
+    float k;
+
+    public Vector3 pos;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
+        animator = GetComponent<Animator>();
+        pos = Quaternion.AngleAxis(-changeAngleY, Vector3.right) * Quaternion.AngleAxis(changeAngleX, Vector3.up)
+            * (cameraPos.forward * 10 + cameraPos.position); ;
     }
 
     void Update()
@@ -42,7 +53,24 @@ public class PlayerMovement : MonoBehaviour
         KeyInput();
         SpeedControl();
         SetDrag();
-        //print(rb.drag);
+        RotateCamera();
+        RotatePlayer();
+
+
+
+
+    }
+
+    private void OnAnimatorIK(int layerIndex)
+    {
+        animator.SetLookAtWeight(1, 0.1f, 1);
+
+
+        animator.SetLookAtPosition(pos);
+
+
+        //print(cameraPos.eulerAngles);
+        //Camera.main.gameObject.transform
     }
 
     private void FixedUpdate()
@@ -52,16 +80,31 @@ public class PlayerMovement : MonoBehaviour
     void KeyInput()
     {
         horizontalInput = Input.GetAxisRaw("Horizontal");
+        //animator.SetFloat("Direction", horizontalInput);
+
         verticalInput = Input.GetAxisRaw("Vertical");
+        animator.SetFloat("Speed", verticalInput);
 
         if (Input.GetKey(jumpkey) && readyToJump && isGrounded)
         {
             readyToJump = false;
 
-            Jump();
+            animator.SetBool("Jump", true);
 
             Invoke(nameof(ResetJump), jumpCooldown);
-            //print("Jump!");
+            print("Jump!");
+        }
+
+
+        changeAngleX += Input.GetAxis("Mouse X");
+        changeAngleX = Mathf.Clamp(changeAngleX, -51f, 51f);
+        
+        changeAngleY += Input.GetAxis("Mouse Y");
+        changeAngleY = Mathf.Clamp(changeAngleY, -65f, 70f);
+        if (animator.GetBool("Jump"))
+        {
+            k = Mathf.Lerp(k, -65f, Time.deltaTime);
+            changeAngleY = Mathf.Clamp(changeAngleY, k, 70f);
         }
     }
 
@@ -70,7 +113,12 @@ public class PlayerMovement : MonoBehaviour
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
 
         if (isGrounded)
-            rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
+        {
+            if (verticalInput > 0)
+                rb.AddForce(moveDirection.normalized * moveSpeed * 5f, ForceMode.Force);
+            if (verticalInput < 0)
+                rb.AddForce(moveDirection.normalized * moveSpeed * 2.5f, ForceMode.Force);
+        }
         else
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f * airMultiplier, ForceMode.Force);
     }
@@ -98,15 +146,48 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    void ResetJump()
+    {
+        readyToJump = true;
+    }
+
+    void RotateCamera()
+    {
+        Quaternion rot = Quaternion.AngleAxis(changeAngleX, Vector3.up) *
+                 Quaternion.AngleAxis(-changeAngleY, Vector3.right);
+        pos = rot * (cameraPos.forward * 10) + cameraPos.position;
+
+        Camera.main.transform.rotation = Quaternion.LookRotation(pos - cameraPos.position);
+        print(changeAngleY);
+        Debug.DrawLine(cameraPos.position, pos, Color.red);
+    }
+
+    void RotatePlayer()
+    {
+        if (changeAngleX == 51f)
+        {
+            changeAngleX--;
+            transform.rotation = transform.rotation * Quaternion.Euler(0f, 2.5f, 0f);
+        }
+        if (changeAngleX == -51f)
+        {
+            changeAngleX++;
+            transform.rotation = transform.rotation * Quaternion.Euler(0f, -2.5f, 0f);
+        }
+    }
+    void JumpOver()
+    {
+        animator.SetBool("Jump", false);
+        animator.SetBool("Rest", false);
+    }
     void Jump()
     {
         rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
 
         rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
-    }
+        k = changeAngleY;
 
-    void ResetJump()
-    {
-        readyToJump = true;
+
+
     }
 }

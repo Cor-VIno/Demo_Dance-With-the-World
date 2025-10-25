@@ -16,29 +16,23 @@ public class Geomagnetism : MagneticController
         SetCanMove(false);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionStay(Collision collision)
     {
-        if(!collision.gameObject.CompareTag("Magnetometric"))
-            return;
-        MagneticController otherMagnetic = collision.gameObject.GetComponent<MagneticController>();
-        if (otherMagnetic != null)
+        if (!collision.gameObject.CompareTag("Magnetometric"))
         {
-            if (magMode == E_MagMode.N && otherMagnetic.magMode == E_MagMode.N)
-            {
-                Debug.Log("North-North repulsion");
-            }
-            else if (magMode == E_MagMode.S && otherMagnetic.magMode == E_MagMode.S)
-            {
-                Debug.Log("South-South repulsion");
-            }
-            else if ((magMode == E_MagMode.N && otherMagnetic.magMode == E_MagMode.S) ||
-                     (magMode == E_MagMode.S && otherMagnetic.magMode == E_MagMode.N))
+            return;
+        }
+        MagneticController otherMagnetic = collision.gameObject.GetComponent<MagneticController>();
+        otherMagnetic.SetCanMove(true);
+        if (magMode != E_MagMode.None && otherMagnetic.magMode != E_MagMode.None)
+        {
+            if (magMode != otherMagnetic.magMode)
             {
                 otherMagnetic.SetCanMove(false);
             }
             else
             {
-                Debug.Log("One or both objects have no magnetic mode.");
+                otherMagnetic.GenerateInteractionForce(gameObject, 100, false);
             }
         }
     }

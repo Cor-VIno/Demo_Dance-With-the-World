@@ -24,6 +24,10 @@ public class MagneticController : MonoBehaviour
         UpdateCanMove();
     }
 
+    private void Update()
+    {
+        UpdateColor();
+    }
     public void SetMagMode(E_MagMode mode)
     {
         magMode = mode;

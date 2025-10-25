@@ -5,9 +5,12 @@ using UnityEngine;
 public class Cam : MonoBehaviour
 {
     public Transform cameraPosition;
+    //public PlayerMovement playerMovement;
     void Update()
     {
         this.transform.position = cameraPosition.position;
-        this.transform.rotation = cameraPosition.rotation;
+        //Vector3 pos = 
+        //this.transform.rotation = cameraPosition.rotation;
+        //print(transform.eulerAngles);
     }
 }

@@ -18,18 +18,19 @@ public class PlayerCam : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+    //void Update()
+    //{
+    //    float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
+    //    float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
-        yRotation += mouseX;
+    //    yRotation += mouseX;
+    //    xRotation -= mouseY;
 
-        xRotation -= mouseY;
-        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+    //    xRotation = Mathf.Clamp(xRotation, -80f, 80f);
+    //    yRotation = Mathf.Clamp(yRotation, -50f, 50f);
 
-        transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
-        orientation.rotation = Quaternion.Euler(0, yRotation, 0);
+    //    transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
+    //    orientation.rotation = Quaternion.Euler(0, yRotation, 0);
 
-    }
+    //}
 }
