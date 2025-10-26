@@ -9,10 +9,12 @@ public enum E_MagMode
     N,
     S,
 }
+
 public class MagneticController : MonoBehaviour
 {
     public E_MagMode magMode = E_MagMode.None;
     public bool canMove;
+    public bool hasInfinityMag;
     protected Outline outline;
     protected Rigidbody rb;
 
@@ -28,10 +30,23 @@ public class MagneticController : MonoBehaviour
     {
         UpdateColor();
     }
+
     public void SetMagMode(E_MagMode mode)
     {
         magMode = mode;
         UpdateColor();
+    }
+
+    public E_MagMode TakeMagMode()
+    {
+        E_MagMode mode = magMode;
+        if (!hasInfinityMag)
+        {
+            magMode = E_MagMode.None;
+            UpdateColor();
+        }
+
+        return mode;
     }
 
     protected void UpdateColor()
@@ -71,7 +86,8 @@ public class MagneticController : MonoBehaviour
         {
             return;
         }
+
         Vector3 dis = formObj.transform.position - transform.position;
-        rb.AddForce(dis.normalized * ((isAttract ? 1 : -1) * force),ForceMode.Force);
+        rb.AddForce(dis.normalized * ((isAttract ? 1 : -1) * force), ForceMode.Force);
     }
 }

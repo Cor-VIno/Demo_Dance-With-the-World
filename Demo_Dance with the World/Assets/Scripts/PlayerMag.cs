@@ -53,23 +53,29 @@ public class PlayerMag : MonoBehaviour
         // playerHasMagTypes = new[] { E_MagMode.N, E_MagMode.S };
         playerHasMagTypes.Push(E_MagMode.N);
         playerHasMagTypes.Push(E_MagMode.S);
+        UpdateHasMagTypes();
     }
 
     void Update()
     {
         LookObj();
         CheckAndLockObj();
-        string temp = string.Empty;
-        foreach (E_MagMode playerHasMagType in playerHasMagTypes)
-        {
-            temp += playerHasMagType + " ";
-        }
-        //Debug.Log(temp);
     }
 
     private void FixedUpdate()
     {
         GenerateForce();
+    }
+
+    private void UpdateHasMagTypes()
+    {
+        string temp = string.Empty;
+        foreach (E_MagMode playerHasMagType in playerHasMagTypes)
+        {
+            temp += playerHasMagType + " ";
+        }
+
+        Debug.Log(temp);
     }
 
     private void LookObj()
@@ -110,19 +116,21 @@ public class PlayerMag : MonoBehaviour
                 if (!contactedObjs.Contains(lookAtObj) || lookAtObjMag.magMode == playerHasMagTypes.Peek())
                 {
                     targetObjs.Add(new TargetObj(lookAtObj, defaultEnergy, playerHasMagTypes.Pop()));
+                    UpdateHasMagTypes();
                 }
             }
             else
             {
                 lookAtObjMag.SetMagMode(playerHasMagTypes.Pop());
+                UpdateHasMagTypes();
             }
         }
         else if (Input.GetMouseButtonDown(1) && playerHasMagTypes.Count < maxTypeCount)
         {
             if (lookAtObjMag.magMode != E_MagMode.None)
             {
-                playerHasMagTypes.Push(lookAtObjMag.magMode);
-                lookAtObjMag.SetMagMode(E_MagMode.None);
+                playerHasMagTypes.Push(lookAtObjMag.TakeMagMode());
+                UpdateHasMagTypes();
             }
         }
     }
