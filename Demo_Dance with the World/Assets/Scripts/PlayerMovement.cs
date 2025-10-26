@@ -68,8 +68,6 @@ public class PlayerMovement : MonoBehaviour
     private void OnAnimatorIK(int layerIndex)
     {
         animator.SetLookAtWeight(1, 0.1f, 1);
-
-
         animator.SetLookAtPosition(pos);
 
 
@@ -84,11 +82,11 @@ public class PlayerMovement : MonoBehaviour
     }
     void KeyInput()
     {
-        horizontalInput = Input.GetAxisRaw("Horizontal");
-        //animator.SetFloat("Direction", horizontalInput);
+        horizontalInput = Input.GetAxis("Horizontal");
+        animator.SetFloat("Direction", horizontalInput);
 
-        verticalInput = Input.GetAxisRaw("Vertical");
-        animator.SetFloat("Speed", verticalInput);
+        verticalInput = Input.GetAxis("Vertical");
+        animator.SetFloat("Speed", Mathf.Min(1, Mathf.Sqrt(verticalInput * verticalInput + horizontalInput * horizontalInput)));
 
         if (Input.GetKey(jumpkey) && readyToJump && isGrounded)
         {
@@ -97,7 +95,7 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("Jump", true);
 
             Invoke(nameof(ResetJump), jumpCooldown);
-            print("Jump!");
+            //print("Jump!");
         }
 
         inputX = Input.GetAxis("Mouse X");
@@ -132,12 +130,16 @@ public class PlayerMovement : MonoBehaviour
     void MovePlayer()
     {
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
-
+        if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
+        {
+            moveDirection = Vector3.zero;
+        }
+        //animator.SetFloat(("Direction"),moveDirection.magnitude);
         if (isGrounded)
         {
-            if (verticalInput > 0)
+            if (animator.GetFloat("Speed") > 0)
                 rb.AddForce(moveDirection.normalized * moveSpeed * 5f, ForceMode.Force);
-            if (verticalInput < 0)
+            if (animator.GetFloat("Speed") < 0)
                 rb.AddForce(moveDirection.normalized * moveSpeed * 2.5f, ForceMode.Force);
         }
         else
@@ -151,6 +153,12 @@ public class PlayerMovement : MonoBehaviour
 
     void SetDrag()
     {
+        //if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.S))
+        //{
+        //    rb.velocity = transform.TransformDirection(new Vector3(rb.velocity.x, rb.velocity.y, 0));
+        //}
+        //if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
+        //    rb.velocity = transform.TransformDirection(new Vector3(0, rb.velocity.y, rb.velocity.z));
         if (isGrounded)
             rb.drag = groundDrag;
         else
@@ -192,11 +200,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.W))
         {
-            //this.transform.Rotate(Vector3.up * inputX);
-            
-                rb.AddTorque(transform.up * inputX * APIX / 300, ForceMode.VelocityChange);
-            
-
+            rb.AddTorque(transform.up * inputX * APIX / 300, ForceMode.VelocityChange);
         }
     }
     void JumpOver()
