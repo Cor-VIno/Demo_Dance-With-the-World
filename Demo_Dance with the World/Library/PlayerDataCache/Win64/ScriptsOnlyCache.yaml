@@ -2,16 +2,35 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - Cam
+    - CamPos
+    - Geomagnetism
     - MagneticController
     - Outline
     - PlayerCam
     - PlayerMag
     - PlayerMovement
+    - Test
+    - UnityChan.AutoBlink
+    - UnityChan.FaceUpdate
+    - UnityChan.IKCtrlRightHand
+    - UnityChan.IdleChanger
+    - UnityChan.RandomWind
+    - UnityChan.SpringBone
+    - UnityChan.SpringCollider
+    - UnityChan.SpringManager
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
+    Unity.TextMeshPro:
+    - TMPro.TMP_FontAsset
+    - TMPro.TMP_Settings
+    - TMPro.TMP_SpriteAsset
+    - TMPro.TMP_StyleSheet
+    Unity.TextMeshPro.dll:
+    - TMPro.TMP_FontAsset
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationBlendTree.Node
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
     - UnityEditor.Graphs.AnimatorControllerTool
@@ -26,8 +45,27 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
   serializedClasses:
+    Unity.TextMeshPro:
+    - TMPro.FaceInfo_Legacy
+    - TMPro.FontAssetCreationSettings
+    - TMPro.KerningTable
+    - TMPro.TMP_Character
+    - TMPro.TMP_FontFeatureTable
+    - TMPro.TMP_FontWeightPair
+    - TMPro.TMP_GlyphAdjustmentRecord
+    - TMPro.TMP_GlyphPairAdjustmentRecord
+    - TMPro.TMP_GlyphValueRecord
+    - TMPro.TMP_Sprite
+    - TMPro.TMP_SpriteCharacter
+    - TMPro.TMP_SpriteGlyph
+    - TMPro.TMP_Style
     UnityEngine.CoreModule:
     - UnityEngine.Events.PersistentCallGroup
+    UnityEngine.TextCoreFontEngineModule:
+    - UnityEngine.TextCore.FaceInfo
+    - UnityEngine.TextCore.Glyph
+    - UnityEngine.TextCore.GlyphMetrics
+    - UnityEngine.TextCore.GlyphRect
     UnityEngine.UI:
     - UnityEngine.UI.MaskableGraphic/CullStateChangedEvent
   methodsToPreserve: []
@@ -51,47 +89,93 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 49
+      Script: {instanceID: 0}
     - Class: 54
       Script: {instanceID: 0}
     - Class: 64
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 89
+      Script: {instanceID: 0}
+    - Class: 90
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 16652}
+      Script: {instanceID: 16678}
     - Class: 114
-      Script: {instanceID: 16674}
+      Script: {instanceID: 16680}
     - Class: 114
-      Script: {instanceID: 16696}
+      Script: {instanceID: 16708}
     - Class: 114
-      Script: {instanceID: 17074}
+      Script: {instanceID: 16730}
     - Class: 114
-      Script: {instanceID: 17252}
+      Script: {instanceID: 16752}
     - Class: 114
-      Script: {instanceID: 17332}
+      Script: {instanceID: 17130}
     - Class: 114
-      Script: {instanceID: 17518}
+      Script: {instanceID: 17268}
     - Class: 114
-      Script: {instanceID: 17742}
+      Script: {instanceID: 17310}
+    - Class: 114
+      Script: {instanceID: 17362}
+    - Class: 114
+      Script: {instanceID: 17390}
+    - Class: 114
+      Script: {instanceID: 17576}
+    - Class: 114
+      Script: {instanceID: 17800}
     - Class: 114
       Script: {instanceID: 17954}
     - Class: 114
-      Script: {instanceID: 18748}
+      Script: {instanceID: 18014}
     - Class: 114
-      Script: {instanceID: 21318}
+      Script: {instanceID: 18810}
+    - Class: 114
+      Script: {instanceID: 18874}
+    - Class: 114
+      Script: {instanceID: 19334}
+    - Class: 114
+      Script: {instanceID: 19338}
+    - Class: 114
+      Script: {instanceID: 19600}
+    - Class: 114
+      Script: {instanceID: 20026}
+    - Class: 114
+      Script: {instanceID: 20332}
+    - Class: 114
+      Script: {instanceID: 21172}
+    - Class: 114
+      Script: {instanceID: 21392}
+    - Class: 114
+      Script: {instanceID: 21444}
+    - Class: 114
+      Script: {instanceID: 21588}
+    - Class: 114
+      Script: {instanceID: 23156}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 134
       Script: {instanceID: 0}
+    - Class: 135
+      Script: {instanceID: 0}
     - Class: 136
+      Script: {instanceID: 0}
+    - Class: 137
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -106,6 +190,24 @@ ScriptsOnlyBuild:
     - Class: 224
       Script: {instanceID: 0}
   scriptHashData:
+  - hash:
+      serializedVersion: 2
+      Hash: d6347f682ebc36a70bee00fd6a4451b8
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Geomagnetism
+  - hash:
+      serializedVersion: 2
+      Hash: cde618686d62cad5d199674d6efb7469
+    assemblyName: Assembly-CSharp
+    namespaceName: UnityChan
+    className: IdleChanger
+  - hash:
+      serializedVersion: 2
+      Hash: e0e01fcb97134847e4978d9a035def70
+    assemblyName: Assembly-CSharp
+    namespaceName: UnityChan
+    className: UnityChanControlScriptWithRgidBody
   - hash:
       serializedVersion: 2
       Hash: 540882762544409cc4530e60db00e951
@@ -180,7 +282,13 @@ ScriptsOnlyBuild:
     className: PlayerCam
   - hash:
       serializedVersion: 2
-      Hash: a07a07995d6ef401d7902fd1482b97f7
+      Hash: a8865ea7c8780b8120f7086f6a11aef8
+    assemblyName: Assembly-CSharp
+    namespaceName: UnityChan
+    className: SpringCollider
+  - hash:
+      serializedVersion: 2
+      Hash: 45b432fb6219e4012710247d5249859f
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: PlayerMag
@@ -234,7 +342,7 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
-      Hash: c33ecc7a85d0a0a247ebb04e35281be7
+      Hash: 4b3a1d01e3a3bba602ba1b3dc92032c0
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: PlayerMovement
@@ -280,6 +388,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 79d3c64099e6e88e80b0821b2b493fb7
+    assemblyName: Assembly-CSharp
+    namespaceName: UnityChan
+    className: SpringManager
   - hash:
       serializedVersion: 2
       Hash: fce9b835d1e8b08e7ecea8da19f21986
@@ -352,6 +466,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: Button
+  - hash:
+      serializedVersion: 2
+      Hash: a2cfc18f4280528b32187137fa614570
+    assemblyName: Assembly-CSharp
+    namespaceName: UnityChan
+    className: ThirdPersonCamera
   - hash:
       serializedVersion: 2
       Hash: d90629714fa6b0145fcaffc87f5c6559
@@ -450,6 +570,12 @@ ScriptsOnlyBuild:
     className: Cam
   - hash:
       serializedVersion: 2
+      Hash: 5714af7ad1e47b854df9e61ae628ec64
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: CamPos
+  - hash:
+      serializedVersion: 2
       Hash: 0a3f328f3ea906bbbcf794f4c27ee59d
     assemblyName: Unity.VisualScripting.Flow
     namespaceName: Unity.VisualScripting
@@ -522,10 +648,22 @@ ScriptsOnlyBuild:
     className: TMP_Settings
   - hash:
       serializedVersion: 2
+      Hash: 30f5f6c85742555ffc0efb387b5c2790
+    assemblyName: Assembly-CSharp
+    namespaceName: UnityChan
+    className: FaceUpdate
+  - hash:
+      serializedVersion: 2
       Hash: ca7965796a6fc0e5baad4cb19f5b5ded
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnJointBreak2DMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 270d7a6986f3c67c86062568b436bde7
+    assemblyName: Assembly-CSharp
+    namespaceName: UnityChan
+    className: SplashScreen
   - hash:
       serializedVersion: 2
       Hash: 9ebc0a3016506a0cbb7e0306dfcb9497
@@ -582,6 +720,12 @@ ScriptsOnlyBuild:
     className: GridLayoutGroup
   - hash:
       serializedVersion: 2
+      Hash: eb67914812c43a3ae160d06422f763f7
+    assemblyName: Assembly-CSharp
+    namespaceName: UnityChan
+    className: SpringBone
+  - hash:
+      serializedVersion: 2
       Hash: f2098fcd8ee983a05ec192f63904298f
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -616,6 +760,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnTriggerStayMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: dc700a321988b3ba7a2343adc113c9ae
+    assemblyName: Assembly-CSharp
+    namespaceName: UnityChan
+    className: CameraController
   - hash:
       serializedVersion: 2
       Hash: 10c17b309bdca62b4d7fbaf113ed4ca0
@@ -714,6 +864,12 @@ ScriptsOnlyBuild:
     className: TextMeshProUGUI
   - hash:
       serializedVersion: 2
+      Hash: 1934e2100139650b22d4490821478a68
+    assemblyName: Assembly-CSharp
+    namespaceName: UnityChan
+    className: RandomWind
+  - hash:
+      serializedVersion: 2
       Hash: da5a949a0bbd2ff91bc51c5805c2c41f
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -750,6 +906,12 @@ ScriptsOnlyBuild:
     className: MarkerTrack
   - hash:
       serializedVersion: 2
+      Hash: 0693a9bf8f90bcf35d65a38ade6bc501
+    assemblyName: Assembly-CSharp
+    namespaceName: UnityChan
+    className: IKCtrlRightHand
+  - hash:
+      serializedVersion: 2
       Hash: 672716ae97f6ddb615fa5ac3ec9da349
     assemblyName: UnityEngine.TestRunner
     namespaceName: UnityEngine.TestTools
@@ -760,6 +922,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro
     namespaceName: TMPro
     className: TextContainer
+  - hash:
+      serializedVersion: 2
+      Hash: 4c5bc6351524a83ab7ffedd73ece914d
+    assemblyName: Assembly-CSharp
+    namespaceName: UnityChan
+    className: AutoBlink
   - hash:
       serializedVersion: 2
       Hash: f669be52680c88846b2093fd41d1e06e
@@ -934,6 +1102,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline
     namespaceName: UnityEngine.Timeline
     className: SignalEmitter
+  - hash:
+      serializedVersion: 2
+      Hash: 1b81e9c2b322d7f4d6b70efbcab7826e
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Test
   - hash:
       serializedVersion: 2
       Hash: 02a47340661d2ea7c6d30e292cfef403
