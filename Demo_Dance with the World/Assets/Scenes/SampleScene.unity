@@ -854,7 +854,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraPos: {fileID: 250843408}
-  playerPos: {fileID: 1267510831}
+  playerMovement: {fileID: 1267510829}
 --- !u!4 &1625884283 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3467412201440507112, guid: 2204e0289f3267449badc7e0cfb84c72, type: 3}
@@ -1227,11 +1227,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7229412794412500879, guid: 8a86b15d110a76c45b1e498c7df51ad1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.0397
+      value: -0.0443
       objectReference: {fileID: 0}
     - target: {fileID: 7229412794412500879, guid: 8a86b15d110a76c45b1e498c7df51ad1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.1284
+      value: 0.1429
       objectReference: {fileID: 0}
     - target: {fileID: 7229412794412500879, guid: 8a86b15d110a76c45b1e498c7df51ad1, type: 3}
       propertyPath: m_LocalPosition.z

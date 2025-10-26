@@ -115,23 +115,23 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 16680}
     - Class: 114
-      Script: {instanceID: 16708}
+      Script: {instanceID: 16684}
     - Class: 114
-      Script: {instanceID: 16730}
+      Script: {instanceID: 16710}
     - Class: 114
-      Script: {instanceID: 16752}
+      Script: {instanceID: 16732}
     - Class: 114
-      Script: {instanceID: 17130}
+      Script: {instanceID: 16754}
     - Class: 114
-      Script: {instanceID: 17268}
+      Script: {instanceID: 17132}
     - Class: 114
-      Script: {instanceID: 17310}
+      Script: {instanceID: 17270}
     - Class: 114
-      Script: {instanceID: 17362}
+      Script: {instanceID: 17312}
     - Class: 114
-      Script: {instanceID: 17390}
+      Script: {instanceID: 17364}
     - Class: 114
-      Script: {instanceID: 17576}
+      Script: {instanceID: 17392}
     - Class: 114
       Script: {instanceID: 17800}
     - Class: 114
@@ -205,6 +205,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp
     namespaceName: UnityChan
     className: UnityChanControlScriptWithRgidBody
+  - hash:
+      serializedVersion: 2
+      Hash: 4b3a1d01e3a3bba602ba1b3dc92032c0
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: PlayerMovement
   - hash:
       serializedVersion: 2
       Hash: 540882762544409cc4530e60db00e951
@@ -337,12 +343,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: RawImage
-  - hash:
-      serializedVersion: 2
-      Hash: 4b3a1d01e3a3bba602ba1b3dc92032c0
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: PlayerMovement
   - hash:
       serializedVersion: 2
       Hash: 1321993db8249e1e05e1e0492b2bbdc3
@@ -567,7 +567,7 @@ ScriptsOnlyBuild:
     className: Cam
   - hash:
       serializedVersion: 2
-      Hash: 5714af7ad1e47b854df9e61ae628ec64
+      Hash: 51bb282d5837b5385c6b722e20dc3040
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: CamPos

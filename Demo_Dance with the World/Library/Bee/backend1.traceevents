@@ -1,382 +1,80 @@
 { "cat":"", "pid":12345, "tid":0, "ts":0, "ph":"M", "name":"process_name", "args": { "name":"bee_backend" } }
-,{ "pid":12345, "tid":0, "ts":1761476128304543, "dur":1908, "ph":"X", "name": "DriverInitData",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1761476128306462, "dur":101, "ph":"X", "name": "RemoveStaleOutputs",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1761476128306598, "dur":835, "ph":"X", "name": "BuildQueueInit",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1761476128307861, "dur":124, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.ClothModule.dll" }}
-,{ "pid":12345, "tid":0, "ts":1761476128308062, "dur":125, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.CrashReportingModule.dll" }}
-,{ "pid":12345, "tid":0, "ts":1761476128308500, "dur":56, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.ProfilerModule.dll" }}
-,{ "pid":12345, "tid":0, "ts":1761476128308750, "dur":53, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.TerrainModule.dll" }}
-,{ "pid":12345, "tid":0, "ts":1761476128309299, "dur":59, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/Unity.VisualScripting.Flow.dll" }}
-,{ "pid":12345, "tid":0, "ts":1761476128309969, "dur":56, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/app.info" }}
-,{ "pid":12345, "tid":0, "ts":1761476128307455, "dur":2925, "ph":"X", "name": "EnqueueRequestedNodes",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1761476128310381, "dur":165483, "ph":"X", "name": "WaitForBuildFinished", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1761476128475864, "dur":559, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1761476128476423, "dur":64, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1761476128476789, "dur":1144, "ph":"X", "name": "Tundra",  "args": { "detail":"Write AllBuiltNodes" }}
-,{ "pid":12345, "tid":1, "ts":1761476128307220, "dur":3174, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1761476128310401, "dur":2885, "ph":"X", "name": "CheckDagSignatures",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1761476128313386, "dur":75, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1761476128313468, "dur":95, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\PlayerDataCache\\Win64\\Data\\boot.config" }}
-,{ "pid":12345, "tid":1, "ts":1761476128313567, "dur":72, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\PlayerDataCache\\Win64\\Data\\RuntimeInitializeOnLoads.json" }}
-,{ "pid":12345, "tid":1, "ts":1761476128313639, "dur":72, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\PlayerDataCache\\Win64\\Data\\ScriptingAssemblies.json" }}
-,{ "pid":12345, "tid":1, "ts":1761476128313844, "dur":140, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"F:\\Github\\Demo_Dance-With-the-World\\Demo_Dance with the World\\Library\\Bee\\PlayerScriptAssemblies\\Assembly-CSharp.dll" }}
-,{ "pid":12345, "tid":1, "ts":1761476128313985, "dur":157, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"F:\\Github\\Demo_Dance-With-the-World\\Demo_Dance with the World\\Library\\Bee\\PlayerScriptAssemblies\\Unity.Timeline.dll" }}
-,{ "pid":12345, "tid":1, "ts":1761476128314143, "dur":193, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"F:\\Github\\Demo_Dance-With-the-World\\Demo_Dance with the World\\Library\\Bee\\PlayerScriptAssemblies\\UnityEngine.UI.dll" }}
-,{ "pid":12345, "tid":1, "ts":1761476128314336, "dur":279, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"F:\\Github\\Demo_Dance-With-the-World\\Demo_Dance with the World\\Library\\Bee\\PlayerScriptAssemblies\\Unity.TextMeshPro.dll" }}
-,{ "pid":12345, "tid":1, "ts":1761476128314617, "dur":393, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"F:\\Github\\Demo_Dance-With-the-World\\Demo_Dance with the World\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.Core.dll" }}
-,{ "pid":12345, "tid":1, "ts":1761476128315010, "dur":102, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"F:\\Github\\Demo_Dance-With-the-World\\Demo_Dance with the World\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.State.dll" }}
-,{ "pid":12345, "tid":1, "ts":1761476128315113, "dur":262, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"F:\\Github\\Demo_Dance-With-the-World\\Demo_Dance with the World\\Library\\Bee\\PlayerScriptAssemblies\\Unity.VisualScripting.Flow.dll" }}
-,{ "pid":12345, "tid":1, "ts":1761476128313467, "dur":1971, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"AddBootConfigGUID Library/Bee/artifacts/WinPlayerBuildProgram/boot.config" }}
-,{ "pid":12345, "tid":1, "ts":1761476128315896, "dur":158146, "ph":"X", "name": "AddBootConfigGUID",  "args": { "detail":"Library/Bee/artifacts/WinPlayerBuildProgram/boot.config" }}
-,{ "pid":12345, "tid":1, "ts":1761476128474689, "dur":162, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Library\\Bee\\artifacts\\WinPlayerBuildProgram\\boot.config" }}
-,{ "pid":12345, "tid":1, "ts":1761476128474688, "dur":164, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/boot.config" }}
-,{ "pid":12345, "tid":1, "ts":1761476128474865, "dur":889, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/boot.config" }}
-,{ "pid":12345, "tid":2, "ts":1761476128307248, "dur":3155, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1761476128310408, "dur":259, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1761476128310668, "dur":2641, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1761476128313331, "dur":189, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1761476128338048, "dur":3567, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
-,{ "pid":12345, "tid":2, "ts":1761476128341627, "dur":164, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1761476128341811, "dur":20787, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1761476128362666, "dur":20949, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.ParticleSystemModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1761476128383690, "dur":5030, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/RuntimeInitializeOnLoads.json" }}
-,{ "pid":12345, "tid":2, "ts":1761476128388729, "dur":87119, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1761476128307258, "dur":3153, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1761476128310416, "dur":242, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1761476128310662, "dur":2692, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1761476128313364, "dur":275, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1761476128338196, "dur":3072, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
-,{ "pid":12345, "tid":3, "ts":1761476128341280, "dur":266, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1761476128341595, "dur":20229, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1761476128361835, "dur":305, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1761476128362204, "dur":21105, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.PerformanceReportingModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1761476128383327, "dur":6561, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/sharedassets0.assets" }}
-,{ "pid":12345, "tid":3, "ts":1761476128389897, "dur":85970, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1761476128307325, "dur":3306, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1761476128310631, "dur":2765, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1761476128313412, "dur":81, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"Temp\\StagingArea\\WindowsPlayer.exe" }}
-,{ "pid":12345, "tid":4, "ts":1761476128313398, "dur":95, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World.exe" }}
-,{ "pid":12345, "tid":4, "ts":1761476128313494, "dur":56, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1761476128315740, "dur":5962, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World.exe" }}
-,{ "pid":12345, "tid":4, "ts":1761476128321713, "dur":165, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1761476128324457, "dur":9041, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/System.Runtime.Serialization.dll" }}
-,{ "pid":12345, "tid":4, "ts":1761476128333509, "dur":65, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1761476128333585, "dur":16036, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/Unity.VisualScripting.Flow.dll" }}
-,{ "pid":12345, "tid":4, "ts":1761476128349657, "dur":90, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1761476128349761, "dur":20732, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1761476128370505, "dur":54, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1761476128370588, "dur":22852, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.CoreModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1761476128393463, "dur":82437, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1761476128307294, "dur":3160, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1761476128310454, "dur":324, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1761476128310778, "dur":2624, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1761476128313408, "dur":97, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\unity\\2022.3.55f1c1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\mscorlib.dll" }}
-,{ "pid":12345, "tid":5, "ts":1761476128313403, "dur":103, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/mscorlib.dll" }}
-,{ "pid":12345, "tid":5, "ts":1761476128313506, "dur":368, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1761476128323916, "dur":4652, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/mscorlib.dll" }}
-,{ "pid":12345, "tid":5, "ts":1761476128328707, "dur":11022, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/System.Data.dll" }}
-,{ "pid":12345, "tid":5, "ts":1761476128339741, "dur":206, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1761476128339985, "dur":20798, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.VirtualTexturingModule.dll" }}
-,{ "pid":12345, "tid":5, "ts":1761476128360867, "dur":21921, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.ScreenCaptureModule.dll" }}
-,{ "pid":12345, "tid":5, "ts":1761476128382799, "dur":91, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1761476128382936, "dur":14594, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.AIModule.dll" }}
-,{ "pid":12345, "tid":5, "ts":1761476128397537, "dur":78387, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1761476128307285, "dur":3151, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1761476128310610, "dur":238, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1761476128310848, "dur":2559, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1761476128313408, "dur":131, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\unity\\2022.3.55f1c1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.dll" }}
-,{ "pid":12345, "tid":6, "ts":1761476128313407, "dur":133, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/System.dll" }}
-,{ "pid":12345, "tid":6, "ts":1761476128313540, "dur":397, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1761476128324010, "dur":8661, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/System.dll" }}
-,{ "pid":12345, "tid":6, "ts":1761476128332727, "dur":14654, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/netstandard.dll" }}
-,{ "pid":12345, "tid":6, "ts":1761476128347390, "dur":84, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1761476128347485, "dur":22039, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1761476128369576, "dur":20576, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.DSPGraphModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1761476128390164, "dur":85733, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1761476128307317, "dur":3321, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1761476128310639, "dur":2755, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1761476128313399, "dur":82, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\unity\\2022.3.55f1c1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\MonoBleedingEdge\\EmbedRuntime\\mono-2.0-bdwgc.dll" }}
-,{ "pid":12345, "tid":7, "ts":1761476128313394, "dur":88, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles F:/Github/Demo_Dance-With-the-World/exe/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
-,{ "pid":12345, "tid":7, "ts":1761476128313482, "dur":314, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1761476128326856, "dur":3201, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
-,{ "pid":12345, "tid":7, "ts":1761476128330070, "dur":120, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1761476128330220, "dur":9171, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/System.Data.DataSetExtensions.dll" }}
-,{ "pid":12345, "tid":7, "ts":1761476128339428, "dur":74, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1761476128339515, "dur":21259, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.WindModule.dll" }}
-,{ "pid":12345, "tid":7, "ts":1761476128360822, "dur":21056, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.SharedInternalsModule.dll" }}
-,{ "pid":12345, "tid":7, "ts":1761476128381947, "dur":15460, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.AnimationModule.dll" }}
-,{ "pid":12345, "tid":7, "ts":1761476128397416, "dur":78502, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1761476128308154, "dur":2397, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1761476128310551, "dur":2756, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1761476128313324, "dur":135, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\unity\\2022.3.55f1c1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\MonoBleedingEdge\\etc\\mono\\4.5\\machine.config" }}
-,{ "pid":12345, "tid":8, "ts":1761476128313308, "dur":152, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles F:/Github/Demo_Dance-With-the-World/exe/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
-,{ "pid":12345, "tid":8, "ts":1761476128313460, "dur":323, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1761476128338542, "dur":3896, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
-,{ "pid":12345, "tid":8, "ts":1761476128342450, "dur":76, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1761476128342551, "dur":21094, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.UnityCurlModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1761476128363656, "dur":70, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1761476128363750, "dur":21412, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.InputModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1761476128385207, "dur":7975, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/level0" }}
-,{ "pid":12345, "tid":8, "ts":1761476128393205, "dur":82665, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1761476128307402, "dur":3280, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1761476128310683, "dur":2730, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1761476128313416, "dur":112, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\unity\\2022.3.55f1c1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.Xml.dll" }}
-,{ "pid":12345, "tid":9, "ts":1761476128313414, "dur":115, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/System.Xml.dll" }}
-,{ "pid":12345, "tid":9, "ts":1761476128313530, "dur":370, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1761476128324310, "dur":9260, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/System.Xml.dll" }}
-,{ "pid":12345, "tid":9, "ts":1761476128333665, "dur":14358, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/Unity.VisualScripting.State.dll" }}
-,{ "pid":12345, "tid":9, "ts":1761476128348035, "dur":77, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":9, "ts":1761476128348123, "dur":21600, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" }}
-,{ "pid":12345, "tid":9, "ts":1761476128369778, "dur":20569, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.CrashReportingModule.dll" }}
-,{ "pid":12345, "tid":9, "ts":1761476128390371, "dur":85554, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1761476128307449, "dur":3232, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1761476128310681, "dur":2735, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1761476128313417, "dur":118, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\unity\\2022.3.55f1c1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.Transactions.dll" }}
-,{ "pid":12345, "tid":10, "ts":1761476128313416, "dur":120, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/System.Transactions.dll" }}
-,{ "pid":12345, "tid":10, "ts":1761476128313536, "dur":372, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1761476128323976, "dur":3737, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/System.Transactions.dll" }}
-,{ "pid":12345, "tid":10, "ts":1761476128327738, "dur":83, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1761476128327835, "dur":8899, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/System.EnterpriseServices.dll" }}
-,{ "pid":12345, "tid":10, "ts":1761476128336809, "dur":21390, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/Unity.TextMeshPro.dll" }}
-,{ "pid":12345, "tid":10, "ts":1761476128358210, "dur":110, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":10, "ts":1761476128358358, "dur":22470, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.TLSModule.dll" }}
-,{ "pid":12345, "tid":10, "ts":1761476128380874, "dur":16116, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.ClusterRendererModule.dll" }}
-,{ "pid":12345, "tid":10, "ts":1761476128397005, "dur":78908, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1761476128307471, "dur":3134, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1761476128310605, "dur":2693, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1761476128313344, "dur":392, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1761476128333203, "dur":6536, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/MonoBleedingEdge/etc/mono/config" }}
-,{ "pid":12345, "tid":11, "ts":1761476128339750, "dur":86, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":11, "ts":1761476128339847, "dur":21358, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.VideoModule.dll" }}
-,{ "pid":12345, "tid":11, "ts":1761476128361269, "dur":21462, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.PropertiesModule.dll" }}
-,{ "pid":12345, "tid":11, "ts":1761476128382769, "dur":14668, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.ARModule.dll" }}
-,{ "pid":12345, "tid":11, "ts":1761476128397444, "dur":78433, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1761476128307643, "dur":2936, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1761476128310580, "dur":2834, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1761476128313427, "dur":121, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\unity\\2022.3.55f1c1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.Xml.Linq.dll" }}
-,{ "pid":12345, "tid":12, "ts":1761476128313415, "dur":134, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/System.Xml.Linq.dll" }}
-,{ "pid":12345, "tid":12, "ts":1761476128313550, "dur":406, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1761476128323983, "dur":3605, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/System.Xml.Linq.dll" }}
-,{ "pid":12345, "tid":12, "ts":1761476128327643, "dur":8740, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/System.IO.Compression.FileSystem.dll" }}
-,{ "pid":12345, "tid":12, "ts":1761476128336395, "dur":178, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1761476128336602, "dur":20979, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/Unity.VisualScripting.Core.dll" }}
-,{ "pid":12345, "tid":12, "ts":1761476128357596, "dur":54, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":12, "ts":1761476128357677, "dur":22562, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.TerrainModule.dll" }}
-,{ "pid":12345, "tid":12, "ts":1761476128380317, "dur":16463, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.ContentLoadModule.dll" }}
-,{ "pid":12345, "tid":12, "ts":1761476128396792, "dur":79050, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":13, "ts":1761476128307692, "dur":2876, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":13, "ts":1761476128310568, "dur":2774, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":13, "ts":1761476128313360, "dur":134, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\unity\\2022.3.55f1c1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\MonoBleedingEdge\\etc\\mono\\4.0\\machine.config" }}
-,{ "pid":12345, "tid":13, "ts":1761476128313343, "dur":152, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles F:/Github/Demo_Dance-With-the-World/exe/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
-,{ "pid":12345, "tid":13, "ts":1761476128313495, "dur":346, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":13, "ts":1761476128338841, "dur":3807, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
-,{ "pid":12345, "tid":13, "ts":1761476128342705, "dur":90, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":13, "ts":1761476128342820, "dur":21290, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.UnityAnalyticsModule.dll" }}
-,{ "pid":12345, "tid":13, "ts":1761476128364200, "dur":21055, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.InputLegacyModule.dll" }}
-,{ "pid":12345, "tid":13, "ts":1761476128385277, "dur":8635, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/globalgamemanagers.assets.resS" }}
-,{ "pid":12345, "tid":13, "ts":1761476128393921, "dur":81940, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":14, "ts":1761476128307748, "dur":2817, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":14, "ts":1761476128310566, "dur":2858, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":14, "ts":1761476128313428, "dur":119, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\unity\\2022.3.55f1c1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.ServiceModel.Internals.dll" }}
-,{ "pid":12345, "tid":14, "ts":1761476128313425, "dur":123, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/System.ServiceModel.Internals.dll" }}
-,{ "pid":12345, "tid":14, "ts":1761476128313548, "dur":331, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":14, "ts":1761476128324364, "dur":8209, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/System.ServiceModel.Internals.dll" }}
-,{ "pid":12345, "tid":14, "ts":1761476128332629, "dur":14029, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/Mono.Security.dll" }}
-,{ "pid":12345, "tid":14, "ts":1761476128346697, "dur":21791, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.TilemapModule.dll" }}
-,{ "pid":12345, "tid":14, "ts":1761476128368498, "dur":92, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":14, "ts":1761476128368600, "dur":20558, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.GameCenterModule.dll" }}
-,{ "pid":12345, "tid":14, "ts":1761476128389168, "dur":86689, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":15, "ts":1761476128307772, "dur":2887, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":15, "ts":1761476128310661, "dur":2729, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":15, "ts":1761476128313404, "dur":239, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\unity\\2022.3.55f1c1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\MonoBleedingEdge\\EmbedRuntime\\MonoPosixHelper.dll" }}
-,{ "pid":12345, "tid":15, "ts":1761476128313391, "dur":254, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles F:/Github/Demo_Dance-With-the-World/exe/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
-,{ "pid":12345, "tid":15, "ts":1761476128313646, "dur":327, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":15, "ts":1761476128326565, "dur":1804, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
-,{ "pid":12345, "tid":15, "ts":1761476128328407, "dur":92, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":15, "ts":1761476128328512, "dur":10445, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/System.Drawing.dll" }}
-,{ "pid":12345, "tid":15, "ts":1761476128338972, "dur":67, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":15, "ts":1761476128339052, "dur":21346, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.dll" }}
-,{ "pid":12345, "tid":15, "ts":1761476128360436, "dur":21430, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.SpriteShapeModule.dll" }}
-,{ "pid":12345, "tid":15, "ts":1761476128381908, "dur":15400, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
-,{ "pid":12345, "tid":15, "ts":1761476128397318, "dur":78564, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":16, "ts":1761476128307834, "dur":2723, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":16, "ts":1761476128310557, "dur":2753, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":16, "ts":1761476128313312, "dur":52, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles F:/Github/Demo_Dance-With-the-World/exe/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
-,{ "pid":12345, "tid":16, "ts":1761476128313365, "dur":355, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":16, "ts":1761476128342330, "dur":1203, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
-,{ "pid":12345, "tid":16, "ts":1761476128343545, "dur":210, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":16, "ts":1761476128343767, "dur":21593, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.UnityAnalyticsCommonModule.dll" }}
-,{ "pid":12345, "tid":16, "ts":1761476128365431, "dur":21245, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.IMGUIModule.dll" }}
-,{ "pid":12345, "tid":16, "ts":1761476128386696, "dur":6493, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/globalgamemanagers" }}
-,{ "pid":12345, "tid":16, "ts":1761476128393209, "dur":82676, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":17, "ts":1761476128307874, "dur":2679, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":17, "ts":1761476128310553, "dur":2873, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":17, "ts":1761476128313431, "dur":118, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\unity\\2022.3.55f1c1\\Editor\\Data\\MonoBleedingEdge\\lib\\mono\\unityjit-win32\\System.Security.dll" }}
-,{ "pid":12345, "tid":17, "ts":1761476128313427, "dur":122, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/System.Security.dll" }}
-,{ "pid":12345, "tid":17, "ts":1761476128313550, "dur":352, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":17, "ts":1761476128324095, "dur":8672, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/System.Security.dll" }}
-,{ "pid":12345, "tid":17, "ts":1761476128332806, "dur":14064, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll" }}
-,{ "pid":12345, "tid":17, "ts":1761476128346883, "dur":83, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":17, "ts":1761476128369023, "dur":53, "ph":"X", "name": "EmitNodeFinish",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":17, "ts":1761476128346979, "dur":22104, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.TextRenderingModule.dll" }}
-,{ "pid":12345, "tid":17, "ts":1761476128369128, "dur":20663, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.DirectorModule.dll" }}
-,{ "pid":12345, "tid":17, "ts":1761476128389818, "dur":86062, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":18, "ts":1761476128307904, "dur":2654, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":18, "ts":1761476128310558, "dur":2738, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":18, "ts":1761476128313331, "dur":185, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":18, "ts":1761476128338584, "dur":1636, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
-,{ "pid":12345, "tid":18, "ts":1761476128340346, "dur":20812, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.VehiclesModule.dll" }}
-,{ "pid":12345, "tid":18, "ts":1761476128361169, "dur":56, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":18, "ts":1761476128361235, "dur":21211, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
-,{ "pid":12345, "tid":18, "ts":1761476128382458, "dur":54, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":18, "ts":1761476128382541, "dur":15044, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.AccessibilityModule.dll" }}
-,{ "pid":12345, "tid":18, "ts":1761476128397595, "dur":78256, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":19, "ts":1761476128307955, "dur":2582, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":19, "ts":1761476128310538, "dur":2766, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":19, "ts":1761476128313320, "dur":175, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":19, "ts":1761476128338904, "dur":3769, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
-,{ "pid":12345, "tid":19, "ts":1761476128342761, "dur":21804, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.UnityConnectModule.dll" }}
-,{ "pid":12345, "tid":19, "ts":1761476128364636, "dur":20680, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.ImageConversionModule.dll" }}
-,{ "pid":12345, "tid":19, "ts":1761476128385360, "dur":7494, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/globalgamemanagers.assets" }}
-,{ "pid":12345, "tid":19, "ts":1761476128392878, "dur":83011, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":20, "ts":1761476128307973, "dur":2581, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":20, "ts":1761476128310554, "dur":2748, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":20, "ts":1761476128313343, "dur":400, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":20, "ts":1761476128337136, "dur":1036, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/MonoBleedingEdge/etc/mono/4.5/web.config" }}
-,{ "pid":12345, "tid":20, "ts":1761476128338184, "dur":78, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":20, "ts":1761476128338295, "dur":21512, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/Unity.Timeline.dll" }}
-,{ "pid":12345, "tid":20, "ts":1761476128359817, "dur":130, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":20, "ts":1761476128359972, "dur":21467, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.StreamingModule.dll" }}
-,{ "pid":12345, "tid":20, "ts":1761476128381481, "dur":15440, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.AudioModule.dll" }}
-,{ "pid":12345, "tid":20, "ts":1761476128396932, "dur":78952, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":21, "ts":1761476128308002, "dur":2548, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":21, "ts":1761476128310550, "dur":2820, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":21, "ts":1761476128313371, "dur":74, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles F:/Github/Demo_Dance-With-the-World/exe/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
-,{ "pid":12345, "tid":21, "ts":1761476128313446, "dur":306, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":21, "ts":1761476128336730, "dur":3871, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
-,{ "pid":12345, "tid":21, "ts":1761476128340613, "dur":76, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":21, "ts":1761476128340700, "dur":20676, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.VRModule.dll" }}
-,{ "pid":12345, "tid":21, "ts":1761476128361389, "dur":81, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":21, "ts":1761476128361480, "dur":21506, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.ProfilerModule.dll" }}
-,{ "pid":12345, "tid":21, "ts":1761476128383004, "dur":6488, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/sharedassets0.assets.resS" }}
-,{ "pid":12345, "tid":21, "ts":1761476128389503, "dur":86351, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":22, "ts":1761476128308025, "dur":2536, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":22, "ts":1761476128310561, "dur":2770, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":22, "ts":1761476128313353, "dur":220, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":22, "ts":1761476128338285, "dur":3061, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/MonoBleedingEdge/etc/mono/4.0/web.config" }}
-,{ "pid":12345, "tid":22, "ts":1761476128341357, "dur":196, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":22, "ts":1761476128341559, "dur":55, "ph":"X", "name": "EmitNodeStart",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":22, "ts":1761476128341616, "dur":21120, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.UnityWebRequestModule.dll" }}
-,{ "pid":12345, "tid":22, "ts":1761476128362781, "dur":20934, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.NVIDIAModule.dll" }}
-,{ "pid":12345, "tid":22, "ts":1761476128383766, "dur":1160, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Resources/unity_builtin_extra" }}
-,{ "pid":12345, "tid":22, "ts":1761476128384943, "dur":7754, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/level0.resS" }}
-,{ "pid":12345, "tid":22, "ts":1761476128392707, "dur":83167, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":23, "ts":1761476128308049, "dur":2570, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":23, "ts":1761476128310620, "dur":2720, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":23, "ts":1761476128313351, "dur":265, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":23, "ts":1761476128338816, "dur":3176, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
-,{ "pid":12345, "tid":23, "ts":1761476128342062, "dur":21173, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" }}
-,{ "pid":12345, "tid":23, "ts":1761476128363247, "dur":57, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":23, "ts":1761476128363383, "dur":21334, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.JSONSerializeModule.dll" }}
-,{ "pid":12345, "tid":23, "ts":1761476128384742, "dur":7303, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/resources.assets" }}
-,{ "pid":12345, "tid":23, "ts":1761476128392055, "dur":83814, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":24, "ts":1761476128308082, "dur":2446, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":24, "ts":1761476128310528, "dur":2764, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":24, "ts":1761476128313347, "dur":401, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":24, "ts":1761476128320702, "dur":3429, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/app.info" }}
-,{ "pid":12345, "tid":24, "ts":1761476128324135, "dur":78, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":24, "ts":1761476128324308, "dur":8001, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/System.Net.Http.dll" }}
-,{ "pid":12345, "tid":24, "ts":1761476128332359, "dur":13948, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/System.Core.dll" }}
-,{ "pid":12345, "tid":24, "ts":1761476128346367, "dur":22283, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.UIElementsModule.dll" }}
-,{ "pid":12345, "tid":24, "ts":1761476128368662, "dur":90, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":24, "ts":1761476128368783, "dur":20555, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.GIModule.dll" }}
-,{ "pid":12345, "tid":24, "ts":1761476128389369, "dur":86475, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":25, "ts":1761476128308094, "dur":2426, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":25, "ts":1761476128310521, "dur":2780, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":25, "ts":1761476128331800, "dur":7267, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/MonoBleedingEdge/etc/mono/browscap.ini" }}
-,{ "pid":12345, "tid":25, "ts":1761476128339079, "dur":64, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":25, "ts":1761476128339160, "dur":21452, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.XRModule.dll" }}
-,{ "pid":12345, "tid":25, "ts":1761476128360623, "dur":176, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":25, "ts":1761476128360821, "dur":21465, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.SpriteMaskModule.dll" }}
-,{ "pid":12345, "tid":25, "ts":1761476128382297, "dur":79, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":25, "ts":1761476128382389, "dur":15113, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.AndroidJNIModule.dll" }}
-,{ "pid":12345, "tid":25, "ts":1761476128397511, "dur":78391, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":26, "ts":1761476128308125, "dur":2379, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":26, "ts":1761476128310505, "dur":71, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":26, "ts":1761476128310576, "dur":2771, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":26, "ts":1761476128313365, "dur":360, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":26, "ts":1761476128336481, "dur":646, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
-,{ "pid":12345, "tid":26, "ts":1761476128337172, "dur":21932, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.UI.dll" }}
-,{ "pid":12345, "tid":26, "ts":1761476128359119, "dur":90, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":26, "ts":1761476128359241, "dur":22004, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.SubsystemsModule.dll" }}
-,{ "pid":12345, "tid":26, "ts":1761476128381305, "dur":15939, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.ClusterInputModule.dll" }}
-,{ "pid":12345, "tid":26, "ts":1761476128397270, "dur":78590, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":27, "ts":1761476128307352, "dur":3252, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":27, "ts":1761476128310605, "dur":2794, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":27, "ts":1761476128313399, "dur":116, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Resources/unity default resources" }}
-,{ "pid":12345, "tid":27, "ts":1761476128313516, "dur":357, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":27, "ts":1761476128323096, "dur":2046, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Resources/unity default resources" }}
-,{ "pid":12345, "tid":27, "ts":1761476128325214, "dur":7243, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/System.IO.Compression.dll" }}
-,{ "pid":12345, "tid":27, "ts":1761476128332505, "dur":13450, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/System.ComponentModel.Composition.dll" }}
-,{ "pid":12345, "tid":27, "ts":1761476128345997, "dur":22035, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.UIModule.dll" }}
-,{ "pid":12345, "tid":27, "ts":1761476128368067, "dur":20871, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.GridModule.dll" }}
-,{ "pid":12345, "tid":27, "ts":1761476128388954, "dur":86921, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":28, "ts":1761476128308200, "dur":2356, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":28, "ts":1761476128310556, "dur":2796, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":28, "ts":1761476128313370, "dur":274, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":28, "ts":1761476128338489, "dur":2592, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/MonoBleedingEdge/etc/mono/2.0/web.config" }}
-,{ "pid":12345, "tid":28, "ts":1761476128341093, "dur":455, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":28, "ts":1761476128341554, "dur":57, "ph":"X", "name": "EmitNodeStart",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":28, "ts":1761476128341614, "dur":20082, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
-,{ "pid":12345, "tid":28, "ts":1761476128361707, "dur":107, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":28, "ts":1761476128361847, "dur":21688, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.Physics2DModule.dll" }}
-,{ "pid":12345, "tid":28, "ts":1761476128383619, "dur":4404, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/ScriptingAssemblies.json" }}
-,{ "pid":12345, "tid":28, "ts":1761476128388044, "dur":87802, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":29, "ts":1761476128308226, "dur":2316, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":29, "ts":1761476128310542, "dur":2752, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":29, "ts":1761476128313334, "dur":127, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":29, "ts":1761476128314243, "dur":8692, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/UnityCrashHandler64.exe" }}
-,{ "pid":12345, "tid":29, "ts":1761476128322947, "dur":277, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":29, "ts":1761476128324448, "dur":7884, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/System.Numerics.dll" }}
-,{ "pid":12345, "tid":29, "ts":1761476128332376, "dur":13345, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/System.Configuration.dll" }}
-,{ "pid":12345, "tid":29, "ts":1761476128345768, "dur":21875, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.UmbraModule.dll" }}
-,{ "pid":12345, "tid":29, "ts":1761476128367655, "dur":125, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":29, "ts":1761476128367820, "dur":20729, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.HotReloadModule.dll" }}
-,{ "pid":12345, "tid":29, "ts":1761476128388568, "dur":87296, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":30, "ts":1761476128308243, "dur":2235, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":30, "ts":1761476128310479, "dur":178, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":30, "ts":1761476128310657, "dur":2687, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":30, "ts":1761476128313355, "dur":274, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":30, "ts":1761476128341419, "dur":159, "ph":"X", "name": "EmitNodeFinish",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":30, "ts":1761476128338278, "dur":3306, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
-,{ "pid":12345, "tid":30, "ts":1761476128341622, "dur":156, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":30, "ts":1761476128341809, "dur":21133, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" }}
-,{ "pid":12345, "tid":30, "ts":1761476128362953, "dur":82, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":30, "ts":1761476128363046, "dur":20989, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.LocalizationModule.dll" }}
-,{ "pid":12345, "tid":30, "ts":1761476128384054, "dur":5486, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/resources.assets.resS" }}
-,{ "pid":12345, "tid":30, "ts":1761476128389550, "dur":86315, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":31, "ts":1761476128308265, "dur":2209, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":31, "ts":1761476128310475, "dur":209, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":31, "ts":1761476128310684, "dur":2673, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":31, "ts":1761476128313361, "dur":131, "ph":"X", "name": "ComputeFileSignatureSha1",  "args": { "detail":"E:\\unity\\2022.3.55f1c1\\Editor\\Data\\PlaybackEngines\\WindowsStandaloneSupport\\Variations\\win64_player_nondevelopment_mono\\MonoBleedingEdge\\etc\\mono\\2.0\\machine.config" }}
-,{ "pid":12345, "tid":31, "ts":1761476128313358, "dur":136, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles F:/Github/Demo_Dance-With-the-World/exe/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
-,{ "pid":12345, "tid":31, "ts":1761476128313494, "dur":343, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":31, "ts":1761476128336495, "dur":1908, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
-,{ "pid":12345, "tid":31, "ts":1761476128338424, "dur":21348, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/Assembly-CSharp.dll" }}
-,{ "pid":12345, "tid":31, "ts":1761476128359784, "dur":139, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":31, "ts":1761476128359936, "dur":21385, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.SubstanceModule.dll" }}
-,{ "pid":12345, "tid":31, "ts":1761476128381375, "dur":15642, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.ClothModule.dll" }}
-,{ "pid":12345, "tid":31, "ts":1761476128397025, "dur":78847, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":32, "ts":1761476128308332, "dur":2134, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":32, "ts":1761476128310466, "dur":226, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":32, "ts":1761476128310692, "dur":2681, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":32, "ts":1761476128313374, "dur":86, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles F:/Github/Demo_Dance-With-the-World/exe/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
-,{ "pid":12345, "tid":32, "ts":1761476128313461, "dur":296, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":32, "ts":1761476128339266, "dur":1610, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
-,{ "pid":12345, "tid":32, "ts":1761476128340887, "dur":106, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":32, "ts":1761476128341025, "dur":20635, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.VFXModule.dll" }}
-,{ "pid":12345, "tid":32, "ts":1761476128361724, "dur":21079, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.PhysicsModule.dll" }}
-,{ "pid":12345, "tid":32, "ts":1761476128382833, "dur":20273, "ph":"X", "name": "CopyFiles",  "args": { "detail":"F:/Github/Demo_Dance-With-the-World/exe/UnityPlayer.dll" }}
-,{ "pid":12345, "tid":32, "ts":1761476128403118, "dur":72731, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1761476128479991, "dur":1035, "ph":"X", "name": "ProfilerWriteOutput" }
+,{ "pid":12345, "tid":0, "ts":1761481291293710, "dur":1718, "ph":"X", "name": "DriverInitData",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1761481291295440, "dur":95, "ph":"X", "name": "RemoveStaleOutputs",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1761481291295566, "dur":816, "ph":"X", "name": "BuildQueueInit",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1761481291296825, "dur":63, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.CrashReportingModule.dll" }}
+,{ "pid":12345, "tid":0, "ts":1761481291297063, "dur":107, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/UnityEngine.Physics2DModule.dll" }}
+,{ "pid":12345, "tid":0, "ts":1761481291297854, "dur":77, "ph":"X", "name": "EmitFirstTimeEnqueue",  "args": { "detail":"CopyFiles F:/Github/Demo_Dance-With-the-World/exe/Demo_Dance with the World_Data/Managed/netstandard.dll" }}
+,{ "pid":12345, "tid":0, "ts":1761481291296403, "dur":2213, "ph":"X", "name": "EnqueueRequestedNodes",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1761481291298617, "dur":328, "ph":"X", "name": "WaitForBuildFinished", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1761481291298945, "dur":535, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1761481291299665, "dur":1138, "ph":"X", "name": "Tundra",  "args": { "detail":"Write AllBuiltNodes" }}
+,{ "pid":12345, "tid":1, "ts":1761481291296417, "dur":2249, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1761481291298773, "dur":396, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1761481291296200, "dur":2426, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1761481291298632, "dur":310, "ph":"X", "name": "CheckDagSignatures",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1761481291296529, "dur":2246, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1761481291298776, "dur":298, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1761481291296583, "dur":2235, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1761481291298819, "dur":300, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1761481291297778, "dur":908, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1761481291298686, "dur":147, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1761481291298833, "dur":126, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1761481291296225, "dur":2408, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1761481291298639, "dur":174, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1761481291298814, "dur":181, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1761481291296384, "dur":2257, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1761481291298648, "dur":336, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1761481291296519, "dur":2159, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1761481291298679, "dur":216, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1761481291296579, "dur":2242, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1761481291298821, "dur":124, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1761481291296616, "dur":2166, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1761481291298782, "dur":162, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1761481291296642, "dur":2148, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1761481291298791, "dur":156, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1761481291296760, "dur":2013, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1761481291298774, "dur":211, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1761481291296864, "dur":1904, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1761481291298768, "dur":293, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1761481291296888, "dur":1968, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1761481291298858, "dur":90, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1761481291296916, "dur":1937, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1761481291298855, "dur":100, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1761481291296946, "dur":1818, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1761481291298765, "dur":287, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":17, "ts":1761481291297077, "dur":1732, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":17, "ts":1761481291298810, "dur":253, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":18, "ts":1761481291297106, "dur":1657, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":18, "ts":1761481291298763, "dur":305, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":19, "ts":1761481291297130, "dur":1595, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":19, "ts":1761481291298726, "dur":312, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":20, "ts":1761481291297148, "dur":1607, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":20, "ts":1761481291298755, "dur":317, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":21, "ts":1761481291297175, "dur":1574, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":21, "ts":1761481291298749, "dur":327, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":22, "ts":1761481291297200, "dur":1546, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":22, "ts":1761481291298747, "dur":322, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":23, "ts":1761481291297223, "dur":1513, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":23, "ts":1761481291298736, "dur":309, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":24, "ts":1761481291297253, "dur":1478, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":24, "ts":1761481291298732, "dur":318, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":25, "ts":1761481291297305, "dur":1424, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":25, "ts":1761481291298730, "dur":306, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":26, "ts":1761481291297496, "dur":1233, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":26, "ts":1761481291298729, "dur":291, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":27, "ts":1761481291297643, "dur":1078, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":27, "ts":1761481291298722, "dur":288, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":28, "ts":1761481291297684, "dur":1060, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":28, "ts":1761481291298744, "dur":322, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":29, "ts":1761481291297708, "dur":1032, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":29, "ts":1761481291298740, "dur":293, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":30, "ts":1761481291297730, "dur":978, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":30, "ts":1761481291298742, "dur":318, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":31, "ts":1761481291297753, "dur":938, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":31, "ts":1761481291298692, "dur":202, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":32, "ts":1761481291296409, "dur":2240, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":32, "ts":1761481291298655, "dur":165, "ph":"X", "name": "EarlyStatNonGeneratedFile",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":32, "ts":1761481291298820, "dur":181, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1761481291302992, "dur":418, "ph":"X", "name": "ProfilerWriteOutput" }
 ,
