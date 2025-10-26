@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -34,10 +35,17 @@ public class PlayerMovement : MonoBehaviour
     Animator animator;
     public Transform cameraPos;
     float changeAngleX;
+    float changeRotX;
     float changeAngleY;
     float k;
+    float inputX;
 
+    [HideInInspector]
     public Vector3 pos;
+
+    public float APIX = 1000f;
+    public float APIY = 1000f;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -54,10 +62,6 @@ public class PlayerMovement : MonoBehaviour
         SpeedControl();
         SetDrag();
         RotateCamera();
-        RotatePlayer();
-
-
-
 
     }
 
@@ -76,6 +80,7 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         MovePlayer();
+        RotatePlayer();
     }
     void KeyInput()
     {
@@ -88,24 +93,40 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(jumpkey) && readyToJump && isGrounded)
         {
             readyToJump = false;
-
+            k = changeAngleY;
             animator.SetBool("Jump", true);
 
             Invoke(nameof(ResetJump), jumpCooldown);
             print("Jump!");
         }
 
+        inputX = Input.GetAxis("Mouse X");
+        //animator.SetFloat("Direction", inputX);
+        if (!Input.GetKey(KeyCode.W))
+        {
+            changeAngleX += inputX;
+            changeAngleX = Mathf.Clamp(changeAngleX, -51f, 51f);
+        }
 
-        changeAngleX += Input.GetAxis("Mouse X");
-        changeAngleX = Mathf.Clamp(changeAngleX, -51f, 51f);
-        
+
         changeAngleY += Input.GetAxis("Mouse Y");
         changeAngleY = Mathf.Clamp(changeAngleY, -65f, 70f);
+
+
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            changeAngleX = 0;
+            this.transform.rotation = Quaternion.LookRotation(new Vector3(pos.x, cameraPos.position.y, pos.z) - cameraPos.position);
+        }
+
         if (animator.GetBool("Jump"))
         {
-            k = Mathf.Lerp(k, -65f, Time.deltaTime);
+            k = Mathf.Lerp(k, -45f, Time.deltaTime * 2f);
             changeAngleY = Mathf.Clamp(changeAngleY, k, 70f);
+
         }
+        //print(changeAngleY);
+
     }
 
     void MovePlayer()
@@ -153,26 +174,29 @@ public class PlayerMovement : MonoBehaviour
 
     void RotateCamera()
     {
-        Quaternion rot = Quaternion.AngleAxis(changeAngleX, Vector3.up) *
-                 Quaternion.AngleAxis(-changeAngleY, Vector3.right);
+        Quaternion rot = Quaternion.AngleAxis(changeAngleX, this.transform.up) *
+                 Quaternion.AngleAxis(-changeAngleY, this.transform.right);
         pos = rot * (cameraPos.forward * 10) + cameraPos.position;
 
         Camera.main.transform.rotation = Quaternion.LookRotation(pos - cameraPos.position);
-        print(changeAngleY);
+        //print(changeAngleY);
         Debug.DrawLine(cameraPos.position, pos, Color.red);
     }
 
     void RotatePlayer()
     {
-        if (changeAngleX == 51f)
+        if (changeAngleX == 51f || changeAngleX == -51f)
         {
-            changeAngleX--;
-            transform.rotation = transform.rotation * Quaternion.Euler(0f, 2.5f, 0f);
+            rb.AddTorque(transform.up * inputX * APIX / 300, ForceMode.VelocityChange);
         }
-        if (changeAngleX == -51f)
+
+        if (Input.GetKey(KeyCode.W))
         {
-            changeAngleX++;
-            transform.rotation = transform.rotation * Quaternion.Euler(0f, -2.5f, 0f);
+            //this.transform.Rotate(Vector3.up * inputX);
+            
+                rb.AddTorque(transform.up * inputX * APIX / 300, ForceMode.VelocityChange);
+            
+
         }
     }
     void JumpOver()
@@ -185,9 +209,5 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
 
         rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
-        k = changeAngleY;
-
-
-
     }
 }
