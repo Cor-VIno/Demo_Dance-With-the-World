@@ -105,7 +105,12 @@ public class PlayerMovement : MonoBehaviour
         animator.SetFloat("Direction", horizontalInput);
 
         verticalInput = Input.GetAxis("Vertical");
-        animator.SetFloat("Speed", Mathf.Min(1, Mathf.Sqrt(verticalInput * verticalInput + horizontalInput * horizontalInput)));
+        if(verticalInput>0)
+            animator.SetFloat("Speed", Mathf.Min(1, Mathf.Sqrt(verticalInput * verticalInput + horizontalInput * horizontalInput)));
+        else if(verticalInput<0)
+            animator.SetFloat("Speed", Mathf.Max(-1, -Mathf.Sqrt(verticalInput * verticalInput + horizontalInput * horizontalInput)));
+        else
+            animator.SetFloat("Speed", -Mathf.Abs(horizontalInput/2));
 
         if (Input.GetKey(jumpkey) && readyToJump && isGrounded)
         {
