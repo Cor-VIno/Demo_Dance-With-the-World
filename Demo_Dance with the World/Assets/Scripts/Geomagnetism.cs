@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Geomagnetism : MagneticController
-{
+public class Geomagnetism : MagneticController {
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start() {
+        levelId = -1;
         outline = GetComponent<Outline>();
         rb = GetComponent<Rigidbody>();
         UpdateColor();
@@ -16,22 +15,17 @@ public class Geomagnetism : MagneticController
         SetCanMove(false);
     }
 
-    private void OnCollisionStay(Collision collision)
-    {
-        if (!collision.gameObject.CompareTag("Magnetometric"))
-        {
+    private void OnCollisionStay(Collision collision) {
+        if (!collision.gameObject.CompareTag("Magnetometric")) {
             return;
         }
+
         MagneticController otherMagnetic = collision.gameObject.GetComponent<MagneticController>();
         otherMagnetic.SetCanMove(true);
-        if (magMode != E_MagMode.None && otherMagnetic.magMode != E_MagMode.None)
-        {
-            if (magMode != otherMagnetic.magMode)
-            {
+        if (magMode != E_MagMode.None && otherMagnetic.magMode != E_MagMode.None) {
+            if (magMode != otherMagnetic.magMode) {
                 otherMagnetic.SetCanMove(false);
-            }
-            else
-            {
+            } else {
                 otherMagnetic.GenerateInteractionForce(gameObject, 100, false);
             }
         }
