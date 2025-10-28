@@ -10,7 +10,7 @@ public enum E_MagMode {
 }
 
 public class LevelResetMessage {
-    public int LevelId;
+    public readonly int LevelId;
 
     public LevelResetMessage(int levelId) {
         LevelId = levelId;
@@ -21,6 +21,8 @@ public class MagneticController : MonoBehaviour {
     public E_MagMode magMode = E_MagMode.None;
     public int levelId;
     private E_MagMode initMagType;
+    private Vector3 initPos;
+    private bool initCanMove;
     public bool canMove;
     public bool hasInfinityMag;
     protected Outline outline;
@@ -29,7 +31,7 @@ public class MagneticController : MonoBehaviour {
     private void Awake() {
         Messager.Register<LevelResetMessage>(this, message => {
             if (message.LevelId == levelId) {
-                Init();
+                LevelReset();
             }
         });
     }
@@ -39,12 +41,20 @@ public class MagneticController : MonoBehaviour {
         rb = GetComponent<Rigidbody>();
         UpdateColor();
         UpdateCanMove();
-        initMagType = magMode;
         Init();
     }
 
     private void Init() {
+        initMagType = magMode;
+        initPos = transform.position;
+        initCanMove = canMove;
+    }
+
+    private void LevelReset() {
         SetMagMode(initMagType);
+        transform.position = initPos;
+        SetCanMove(initCanMove);
+        rb.velocity = Vector3.zero;
     }
 
     private void Update() {

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Messager : MonoBehaviour {
-    class MessageReceiver {
+    private class MessageReceiver {
         public object Receiver { get; }
         public Action<object> Handler { get; }
 
