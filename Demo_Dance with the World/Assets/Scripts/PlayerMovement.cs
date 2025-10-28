@@ -104,12 +104,12 @@ public class PlayerMovement : MonoBehaviour
         animator.SetFloat("Direction", horizontalInput);
 
         verticalInput = Input.GetAxis("Vertical");
-        if(verticalInput>0)
+        if (verticalInput > 0)
             animator.SetFloat("Speed", Mathf.Min(1, Mathf.Sqrt(verticalInput * verticalInput + horizontalInput * horizontalInput)));
-        else if(verticalInput<0)
+        else if (verticalInput < 0)
             animator.SetFloat("Speed", Mathf.Max(-1, -Mathf.Sqrt(verticalInput * verticalInput + horizontalInput * horizontalInput)));
         else
-            animator.SetFloat("Speed", -Mathf.Abs(horizontalInput/2));
+            animator.SetFloat("Speed", -Mathf.Abs(horizontalInput / 2));
 
         if (Input.GetKey(jumpkey) && readyToJump && isGrounded)
         {
@@ -133,7 +133,7 @@ public class PlayerMovement : MonoBehaviour
         changeAngleY += Input.GetAxis("Mouse Y");
         changeAngleY = Mathf.Clamp(changeAngleY, -65f, 70f);
 
-        if (Input.GetKeyDown(KeyCode.W) && !isAligningBody && !isFinalAdjustment && isGrounded)
+        if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D)) && !isAligningBody && !isFinalAdjustment && isGrounded)
         {
             StartCoroutine(AlignBodyWithCamera());
         }

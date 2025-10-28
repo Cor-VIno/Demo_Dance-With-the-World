@@ -70,13 +70,6 @@ public class PlayerMag : MonoBehaviour
 
     private void UpdateHasMagTypes()
     {
-        string temp = string.Empty;
-        foreach (E_MagMode playerHasMagType in playerHasMagTypes)
-        {
-            temp += playerHasMagType + " ";
-        }
-
-        Debug.Log(temp);
         Messager.Send(new MagTypesChangedMessage(new Stack<E_MagMode>(playerHasMagTypes)));
     }
 

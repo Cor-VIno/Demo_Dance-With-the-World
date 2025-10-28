@@ -4,24 +4,32 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerMagTypeController : MonoBehaviour {
+public class PlayerMagTypeController : MonoBehaviour
+{
     private RawImage backGround;
     private TextMeshProUGUI text;
 
-    void Start() {
+    void Awake()
+    {
         backGround = GetComponentInChildren<RawImage>();
         text = GetComponentInChildren<TextMeshProUGUI>();
         SetMagType(E_MagMode.None);
     }
 
-    public void SetMagType(E_MagMode mode) {
-        if (mode == E_MagMode.None) {
+    public void SetMagType(E_MagMode mode)
+    {
+        if (mode == E_MagMode.None)
+        {
             backGround.color = Color.gray;
             text.text = "";
-        } else if (mode == E_MagMode.N) {
+        }
+        else if (mode == E_MagMode.N)
+        {
             backGround.color = Color.red;
             text.text = "N";
-        } else {
+        }
+        else
+        {
             backGround.color = Color.blue;
             text.text = "S";
         }
