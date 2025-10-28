@@ -362,6 +362,8 @@
 "Assets/Scripts/Outline.cs"
 "Assets/Scripts/PlayerCam.cs"
 "Assets/Scripts/PlayerMag.cs"
+"Assets/Scripts/PlayerMagTypeController.cs"
+"Assets/Scripts/PlayerMagTypesController.cs"
 "Assets/Scripts/PlayerMovement.cs"
 "Assets/Scripts/Test.cs"
 "Assets/unity-chan!/Unity-chan! Model/Scripts/AutoBlink.cs"

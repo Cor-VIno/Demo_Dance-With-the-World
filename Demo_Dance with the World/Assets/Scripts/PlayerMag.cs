@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -76,6 +77,7 @@ public class PlayerMag : MonoBehaviour
         }
 
         Debug.Log(temp);
+        Messager.Send(new MagTypesChangedMessage(new Stack<E_MagMode>(playerHasMagTypes)));
     }
 
     private void LookObj()

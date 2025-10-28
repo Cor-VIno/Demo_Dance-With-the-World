@@ -79,7 +79,6 @@ public class PlayerMovement : MonoBehaviour
         {
             RotateCamera();
         }
-        Debug.Log(rb.velocity);
         Debug.DrawLine(cameraPos.position, new Vector3(pos.x, cameraPos.position.y, pos.z), Color.red);
     }
 
