@@ -289,6 +289,21 @@ public class PlayerMovement : MonoBehaviour
             rb.AddTorque(transform.up * inputX * APIX / 300, ForceMode.VelocityChange);
         }
     }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (!collision.gameObject.CompareTag("Ground"))
+        {
+            print(1);
+            if (isGrounded)
+            {
+                if (animator.GetFloat("Speed") > 0)
+                    rb.AddForce(-moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
+            }
+            else
+                rb.AddForce(-moveDirection.normalized * moveSpeed * 15f * airMultiplier, ForceMode.Force);
+        }
+        
+    }
 
     void JumpOver()
     {

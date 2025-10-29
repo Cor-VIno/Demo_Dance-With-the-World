@@ -3,11 +3,15 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - Cam
     - CamPos
+    - CheckPoint
     - Geomagnetism
     - MagneticController
+    - Messager
     - Outline
     - PlayerCam
     - PlayerMag
+    - PlayerMagTypeController
+    - PlayerMagTypesController
     - PlayerMovement
     - Test
     - UnityChan.AutoBlink
@@ -25,11 +29,19 @@ ScriptsOnlyBuild:
     - TMPro.TMP_Settings
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
+    Unity.TextMeshPro.dll:
+    - TMPro.TMP_FontAsset
+    - TMPro.TMP_Settings
+    - TMPro.TMP_SpriteAsset
+    - TMPro.TMP_StyleSheet
+    - TMPro.TextMeshProUGUI
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -41,6 +53,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.RawImage
   serializedClasses:
     Unity.TextMeshPro:
     - TMPro.FaceInfo_Legacy
@@ -56,6 +69,7 @@ ScriptsOnlyBuild:
     - TMPro.TMP_SpriteCharacter
     - TMPro.TMP_SpriteGlyph
     - TMPro.TMP_Style
+    - TMPro.VertexGradient
     UnityEngine.CoreModule:
     - UnityEngine.Events.PersistentCallGroup
     UnityEngine.TextCoreFontEngineModule:
@@ -111,47 +125,53 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 16678}
+      Script: {instanceID: 16702}
     - Class: 114
-      Script: {instanceID: 16680}
+      Script: {instanceID: 16704}
     - Class: 114
-      Script: {instanceID: 16684}
+      Script: {instanceID: 16726}
     - Class: 114
-      Script: {instanceID: 16710}
+      Script: {instanceID: 16748}
     - Class: 114
-      Script: {instanceID: 16732}
+      Script: {instanceID: 17126}
     - Class: 114
-      Script: {instanceID: 16754}
+      Script: {instanceID: 17264}
     - Class: 114
-      Script: {instanceID: 17132}
+      Script: {instanceID: 17306}
     - Class: 114
-      Script: {instanceID: 17270}
+      Script: {instanceID: 17358}
     - Class: 114
-      Script: {instanceID: 17312}
+      Script: {instanceID: 17386}
     - Class: 114
-      Script: {instanceID: 17364}
+      Script: {instanceID: 17478}
     - Class: 114
-      Script: {instanceID: 17392}
+      Script: {instanceID: 17572}
     - Class: 114
-      Script: {instanceID: 17800}
+      Script: {instanceID: 17796}
     - Class: 114
-      Script: {instanceID: 17954}
+      Script: {instanceID: 17950}
     - Class: 114
-      Script: {instanceID: 18014}
+      Script: {instanceID: 18010}
     - Class: 114
-      Script: {instanceID: 18810}
+      Script: {instanceID: 18806}
     - Class: 114
-      Script: {instanceID: 18874}
+      Script: {instanceID: 18846}
     - Class: 114
-      Script: {instanceID: 19334}
+      Script: {instanceID: 18872}
     - Class: 114
-      Script: {instanceID: 19338}
+      Script: {instanceID: 19332}
     - Class: 114
-      Script: {instanceID: 19600}
+      Script: {instanceID: 19336}
     - Class: 114
-      Script: {instanceID: 20026}
+      Script: {instanceID: 19598}
     - Class: 114
-      Script: {instanceID: 20332}
+      Script: {instanceID: 20024}
+    - Class: 114
+      Script: {instanceID: 20330}
+    - Class: 114
+      Script: {instanceID: 21058}
+    - Class: 114
+      Script: {instanceID: 21064}
     - Class: 114
       Script: {instanceID: 21172}
     - Class: 114
@@ -159,9 +179,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 21444}
     - Class: 114
-      Script: {instanceID: 21588}
+      Script: {instanceID: 21506}
     - Class: 114
-      Script: {instanceID: 23156}
+      Script: {instanceID: 21590}
+    - Class: 114
+      Script: {instanceID: 21844}
+    - Class: 114
+      Script: {instanceID: 23114}
+    - Class: 114
+      Script: {instanceID: 23164}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -189,28 +215,10 @@ ScriptsOnlyBuild:
   scriptHashData:
   - hash:
       serializedVersion: 2
-      Hash: d6347f682ebc36a70bee00fd6a4451b8
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: Geomagnetism
-  - hash:
-      serializedVersion: 2
-      Hash: cde618686d62cad5d199674d6efb7469
-    assemblyName: Assembly-CSharp
-    namespaceName: UnityChan
-    className: IdleChanger
-  - hash:
-      serializedVersion: 2
-      Hash: e0e01fcb97134847e4978d9a035def70
-    assemblyName: Assembly-CSharp
-    namespaceName: UnityChan
-    className: UnityChanControlScriptWithRgidBody
-  - hash:
-      serializedVersion: 2
-      Hash: 4b3a1d01e3a3bba602ba1b3dc92032c0
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: PlayerMovement
+      Hash: 1ab136900c0edaeeb49424c852595030
+    assemblyName: UnityEngine.UI
+    namespaceName: UnityEngine.UI
+    className: RawImage
   - hash:
       serializedVersion: 2
       Hash: 540882762544409cc4530e60db00e951
@@ -321,7 +329,7 @@ ScriptsOnlyBuild:
     className: UnityOnPointerUpMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 8435ad3cf26ae3aab6ab9b2ecf093e2f
+      Hash: 1e307084af3975be75210fe62aa5dc07
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: MagneticController
@@ -339,10 +347,16 @@ ScriptsOnlyBuild:
     className: UnityOnJointBreakMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 1ab136900c0edaeeb49424c852595030
-    assemblyName: UnityEngine.UI
-    namespaceName: UnityEngine.UI
-    className: RawImage
+      Hash: 39ee8f75292f9089f152c96351cb3a3b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: PlayerMagTypeController
+  - hash:
+      serializedVersion: 2
+      Hash: 4b3a1d01e3a3bba602ba1b3dc92032c0
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: PlayerMovement
   - hash:
       serializedVersion: 2
       Hash: 1321993db8249e1e05e1e0492b2bbdc3
@@ -565,6 +579,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Cam
+  - hash:
+      serializedVersion: 2
+      Hash: 2e7440c465112d799677f31dacd06f7b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: CheckPoint
   - hash:
       serializedVersion: 2
       Hash: 51bb282d5837b5385c6b722e20dc3040
@@ -861,6 +881,12 @@ ScriptsOnlyBuild:
     className: TextMeshProUGUI
   - hash:
       serializedVersion: 2
+      Hash: efcb07d174788198f148c4dd8b2e36ef
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Messager
+  - hash:
+      serializedVersion: 2
       Hash: 1934e2100139650b22d4490821478a68
     assemblyName: Assembly-CSharp
     namespaceName: UnityChan
@@ -915,6 +941,12 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
+      Hash: cde618686d62cad5d199674d6efb7469
+    assemblyName: Assembly-CSharp
+    namespaceName: UnityChan
+    className: IdleChanger
+  - hash:
+      serializedVersion: 2
       Hash: 8bbce9932f67ad8e7f4eefec87800f94
     assemblyName: Unity.TextMeshPro
     namespaceName: TMPro
@@ -945,6 +977,12 @@ ScriptsOnlyBuild:
     className: UnityOnPointerEnterMessageListener
   - hash:
       serializedVersion: 2
+      Hash: e0e01fcb97134847e4978d9a035def70
+    assemblyName: Assembly-CSharp
+    namespaceName: UnityChan
+    className: UnityChanControlScriptWithRgidBody
+  - hash:
+      serializedVersion: 2
       Hash: f2305da2400dfe6f069770a1a63f0f7c
     assemblyName: Unity.Timeline
     namespaceName: UnityEngine.Timeline
@@ -955,6 +993,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: VerticalLayoutGroup
+  - hash:
+      serializedVersion: 2
+      Hash: 085b5ca69e4b70be528ec3aad5153c1c
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: PlayerMagTypesController
   - hash:
       serializedVersion: 2
       Hash: c4b85a67513b4f0cf7b5fb2d5ded04b0
@@ -1099,6 +1143,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline
     namespaceName: UnityEngine.Timeline
     className: SignalEmitter
+  - hash:
+      serializedVersion: 2
+      Hash: eac0691308987b5d42d3ad5ffce90e20
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Geomagnetism
   - hash:
       serializedVersion: 2
       Hash: 1b81e9c2b322d7f4d6b70efbcab7826e
