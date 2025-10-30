@@ -17,16 +17,22 @@ public class LevelResetMessage {
     }
 }
 
+public class SparkMessage {
+}
+
 public class MagneticController : MonoBehaviour {
     public E_MagMode magMode = E_MagMode.None;
     public int levelId;
+    public bool canMove;
+    public bool hasInfinityMag;
+    public float colorChangeSpeed = 5f;
+
     private E_MagMode initMagType;
     private Vector3 initPos;
     private bool initCanMove;
-    public bool canMove;
-    public bool hasInfinityMag;
     protected Outline outline;
     protected Rigidbody rb;
+    private static readonly int Color1 = Shader.PropertyToID("_Color");
 
     private void Awake() {
         Messager.Register<LevelResetMessage>(this, message => {
@@ -34,6 +40,7 @@ public class MagneticController : MonoBehaviour {
                 LevelReset();
             }
         });
+        Messager.Register<SparkMessage>(this, Spark);
     }
 
     protected void Start() {
@@ -76,6 +83,13 @@ public class MagneticController : MonoBehaviour {
         return mode;
     }
 
+    private void Spark(SparkMessage message) {
+        Material mat = GetComponent<Renderer>().material;
+        if (outline.OutlineColor != Color.black) {
+            mat.SetColor(Color1, outline.OutlineColor);
+        }
+    }
+
     protected void UpdateColor() {
         if (magMode == E_MagMode.N)
             outline.OutlineColor = Color.red;
@@ -83,6 +97,13 @@ public class MagneticController : MonoBehaviour {
             outline.OutlineColor = Color.blue;
         else
             outline.OutlineColor = Color.black;
+        Material mat = GetComponent<Renderer>().material;
+        var tempColor = mat.GetColor(Color1);
+        mat.SetColor(Color1, Color.Lerp(tempColor, Color.white, Time.deltaTime * colorChangeSpeed));
+    }
+
+    private Color FromRgba(float r, float g, float b, float a = 255) {
+        return new Color(r / 255f, g / 255f, b / 255f, a / 255f);
     }
 
     public void LookingAt() {

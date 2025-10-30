@@ -293,7 +293,6 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!collision.gameObject.CompareTag("Ground"))
         {
-            print(1);
             if (isGrounded)
             {
                 if (animator.GetFloat("Speed") > 0)

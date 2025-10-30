@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Geomagnetism : MagneticController {
     // Start is called before the first frame update
-    void Start() {
+    new void Start() {
         levelId = -1;
         outline = GetComponent<Outline>();
         rb = GetComponent<Rigidbody>();
