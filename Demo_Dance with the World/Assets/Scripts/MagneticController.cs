@@ -70,7 +70,7 @@ public class MagneticController : MonoBehaviour {
 
     public void SetMagMode(E_MagMode mode) {
         magMode = mode;
-        UpdateColor();
+        //UpdateColor();
     }
 
     public E_MagMode TakeMagMode() {
@@ -98,8 +98,8 @@ public class MagneticController : MonoBehaviour {
         else
             outline.OutlineColor = Color.black;
         Material mat = GetComponent<Renderer>().material;
-        var tempColor = mat.GetColor(Color1);
-        mat.SetColor(Color1, Color.Lerp(tempColor, Color.white, Time.deltaTime * colorChangeSpeed));
+        //var tempColor = mat.GetColor(Color1);
+        //mat.SetColor(Color1, Color.Lerp(tempColor, Color.white, Time.deltaTime * colorChangeSpeed));
     }
 
     private Color FromRgba(float r, float g, float b, float a = 255) {
