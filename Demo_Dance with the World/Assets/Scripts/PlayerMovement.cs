@@ -97,13 +97,13 @@ public class PlayerMovement : MonoBehaviour
             RotatePlayer();
         }
     }
-
+    //private Coroutine myCoroutine;
     void KeyInput()
     {
         horizontalInput = Input.GetAxis("Horizontal");
         animator.SetFloat("Direction", horizontalInput);
-
-        verticalInput = Input.GetAxis("Vertical");
+        //if (myCoroutine == null)
+            verticalInput = Input.GetAxis("Vertical");
         if (verticalInput > 0)
             animator.SetFloat("Speed", Mathf.Min(1, Mathf.Sqrt(verticalInput * verticalInput + horizontalInput * horizontalInput)));
         else if (verticalInput < 0)
@@ -135,16 +135,35 @@ public class PlayerMovement : MonoBehaviour
 
         if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D)) && !isAligningBody && !isFinalAdjustment && isGrounded)
         {
+            //if (myCoroutine != null)
+            //{
+            //    StopCoroutine(myCoroutine);
+            //    myCoroutine = null;
+            //}
+
             StartCoroutine(AlignBodyWithCamera());
         }
-
+        //if (Input.GetKeyUp(KeyCode.W))
+        //{
+        //    myCoroutine = StartCoroutine(QuickDecelerationVer());
+        //}
         if (animator.GetBool("Jump"))
         {
             k = Mathf.Lerp(k, -45f, Time.deltaTime * 2f);
             changeAngleY = Mathf.Clamp(changeAngleY, k, 70f);
         }
     }
+    //IEnumerator QuickDecelerationVer()
+    //{
+    //    while (verticalInput > 0)
+    //    {
+    //        verticalInput = Mathf.Lerp(verticalInput, 0, Time.deltaTime * 3);
 
+    //        print(verticalInput);
+    //        yield return null;
+    //    }
+    //    verticalInput = 0;
+    //}
     IEnumerator AlignBodyWithCamera()
     {
         isAligningBody = true;
@@ -229,10 +248,11 @@ public class PlayerMovement : MonoBehaviour
 
         if (isGrounded)
         {
-            if (animator.GetFloat("Speed") > 0)
-                rb.AddForce(moveDirection.normalized * moveSpeed * 5f, ForceMode.Force);
-            if (animator.GetFloat("Speed") < 0)
-                rb.AddForce(moveDirection.normalized * moveSpeed * 2.5f, ForceMode.Force);
+            float speed = animator.GetFloat("Speed")*5f;
+            if (speed > 0)
+                rb.AddForce(speed * moveDirection.normalized * moveSpeed, ForceMode.Force);
+            if (speed < 0)
+                rb.AddForce(-speed/5f * moveDirection.normalized * moveSpeed * 2.5f, ForceMode.Force);
         }
         else
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f * airMultiplier, ForceMode.Force);
@@ -301,7 +321,7 @@ public class PlayerMovement : MonoBehaviour
             else
                 rb.AddForce(-moveDirection.normalized * moveSpeed * 15f * airMultiplier, ForceMode.Force);
         }
-        
+
     }
 
     void JumpOver()
