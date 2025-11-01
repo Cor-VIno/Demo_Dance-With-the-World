@@ -9,30 +9,22 @@ public enum E_MagMode {
     S,
 }
 
-public class LevelResetMessage {
-    public readonly int LevelId;
-
-    public LevelResetMessage(int levelId) {
-        LevelId = levelId;
-    }
-}
-
-public class SparkMessage {
-}
-
+[RequireComponent(typeof(Outline), typeof(Rigidbody))]
 public class MagneticController : MonoBehaviour {
     public E_MagMode magMode = E_MagMode.None;
     public int levelId;
     public bool canMove;
     public bool hasInfinityMag;
-    public float colorChangeSpeed = 5f;
+    public Material nMaterial;
+    public Material sMaterial;
+    public Material noneMaterial;
 
     private E_MagMode initMagType;
     private Vector3 initPos;
+    private Vector3 initRot;
     private bool initCanMove;
     protected Outline outline;
     protected Rigidbody rb;
-    private static readonly int Color1 = Shader.PropertyToID("_Color");
 
     private void Awake() {
         Messager.Register<LevelResetMessage>(this, message => {
@@ -54,14 +46,17 @@ public class MagneticController : MonoBehaviour {
     private void Init() {
         initMagType = magMode;
         initPos = transform.position;
+        initRot = transform.eulerAngles;
         initCanMove = canMove;
     }
 
     private void LevelReset() {
         SetMagMode(initMagType);
         transform.position = initPos;
+        transform.eulerAngles = initRot;
         SetCanMove(initCanMove);
         rb.velocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
     }
 
     private void Update() {
@@ -84,26 +79,19 @@ public class MagneticController : MonoBehaviour {
     }
 
     private void Spark(SparkMessage message) {
-        Material mat = GetComponent<Renderer>().material;
-        if (outline.OutlineColor != Color.black) {
-            mat.SetColor(Color1, outline.OutlineColor);
-        }
     }
 
     protected void UpdateColor() {
-        if (magMode == E_MagMode.N)
+        if (magMode == E_MagMode.N) {
             outline.OutlineColor = Color.red;
-        else if (magMode == E_MagMode.S)
+            GetComponent<Renderer>().material = nMaterial;
+        } else if (magMode == E_MagMode.S) {
             outline.OutlineColor = Color.blue;
-        else
+            GetComponent<Renderer>().material = sMaterial;
+        } else {
             outline.OutlineColor = Color.black;
-        Material mat = GetComponent<Renderer>().material;
-        //var tempColor = mat.GetColor(Color1);
-        //mat.SetColor(Color1, Color.Lerp(tempColor, Color.white, Time.deltaTime * colorChangeSpeed));
-    }
-
-    private Color FromRgba(float r, float g, float b, float a = 255) {
-        return new Color(r / 255f, g / 255f, b / 255f, a / 255f);
+            GetComponent<Renderer>().material = noneMaterial;
+        }
     }
 
     public void LookingAt() {

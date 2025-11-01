@@ -166,4 +166,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   magMode: 0
+  levelId: 0
   canMove: 1
+  hasInfinityMag: 0
+  nMaterial: {fileID: 2100000, guid: 47be0365601b57940968f31a452cc542, type: 2}
+  sMaterial: {fileID: 2100000, guid: 98423a8ad98bbd14bb47bda71897beea, type: 2}
+  noneMaterial: {fileID: 2100000, guid: 7d5a1f4a0a87a5c47a904f711c1f69f9, type: 2}

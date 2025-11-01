@@ -3,6 +3,60 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public class MagTypesChangedMessage {
+    public readonly Stack<E_MagMode> Types;
+
+    public MagTypesChangedMessage(Stack<E_MagMode> types) {
+        Types = types;
+    }
+}
+
+public class LevelResetMessage {
+    public readonly int LevelId;
+
+    public LevelResetMessage(int levelId) {
+        LevelId = levelId;
+    }
+}
+
+public class CheckPointMessage {
+    public readonly int LevelId;
+
+    public CheckPointMessage(int levelId) {
+        LevelId = levelId;
+    }
+}
+
+public class PlayerNeedResetMessage {
+    public readonly int LevelId;
+    public readonly Rigidbody PlayerRigidbody;
+    public readonly Transform PlayerTransform;
+    public readonly PlayerMag PlayerMagComponent;
+    public readonly bool IsRebirth;
+
+    public PlayerNeedResetMessage(int levelId, Rigidbody playerRigidbody, Transform playerTransform,
+        PlayerMag playerMagComponent, bool isRebirth) {
+        LevelId = levelId;
+        PlayerRigidbody = playerRigidbody;
+        PlayerTransform = playerTransform;
+        PlayerMagComponent = playerMagComponent;
+        IsRebirth = isRebirth;
+    }
+}
+
+public class DisplayMessage {
+    public readonly string Message;
+    public readonly float Duration;
+
+    public DisplayMessage(string message, float duration) {
+        Message = message;
+        Duration = duration;
+    }
+}
+
+public class SparkMessage {
+}
+
 public class Messager : MonoBehaviour {
     private class MessageReceiver {
         public object Receiver { get; }

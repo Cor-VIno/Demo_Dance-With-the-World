@@ -3,15 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MagTypesChangedMessage
-{
-    public readonly Stack<E_MagMode> Types;
 
-    public MagTypesChangedMessage(Stack<E_MagMode> types)
-    {
-        Types = types;
-    }
-}
 
 public class PlayerMagTypesController : MonoBehaviour
 {
