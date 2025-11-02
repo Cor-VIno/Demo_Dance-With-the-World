@@ -22,21 +22,24 @@ public class CheckPoint : MonoBehaviour {
             return;
         }
 
-        isTeleport = true;
+        isTeleport = !message.IsStart;
         message.PlayerRigidbody.velocity = Vector3.zero;
         message.PlayerRigidbody.angularVelocity = Vector3.zero;
         message.PlayerMagComponent.InsideReset(playerHasMagTypes);
         message.PlayerTransform.position = rebirthPos + new Vector3(0, 1.5f, 0);
         Messager.Send(new LevelResetMessage(levelId));
-        if (message.IsRebirth) {
-            Messager.Send(new DisplayMessage("已重生", 3f));
-        } else {
-            Messager.Send(new DisplayMessage("已重置当前关卡物品", 3f));
+        if (!message.IsStart) {
+            if (message.IsRebirth) {
+                Messager.Send(new DisplayMessage("已重生", 3f));
+            } else {
+                Messager.Send(new DisplayMessage("已重置当前关卡物品", 3f));
+            }
         }
     }
 
     private void OnTriggerEnter(Collider other) {
-        if (!hasCollision && !isTeleport && other.attachedRigidbody.CompareTag("Player")) {
+        var player = other.attachedRigidbody.gameObject;
+        if (!hasCollision && !isTeleport && player.CompareTag("Player")) {
             Messager.Send(new CheckPointMessage(levelId));
             Messager.Send(new DisplayMessage("已设置重生点", 3f));
             hasCollision = true;
@@ -44,7 +47,7 @@ public class CheckPoint : MonoBehaviour {
     }
 
     private void OnTriggerExit(Collider other) {
-        if (hasCollision && other.attachedRigidbody.CompareTag("Player")) {
+        if (other.attachedRigidbody.gameObject.CompareTag("Player")) {
             hasCollision = false;
             isTeleport = false;
         }

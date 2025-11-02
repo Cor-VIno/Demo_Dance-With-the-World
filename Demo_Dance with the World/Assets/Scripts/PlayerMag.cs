@@ -49,16 +49,15 @@ public class PlayerMag : MonoBehaviour {
 
     void Start() {
         rb = GetComponent<Rigidbody>();
-        // playerHasMagTypes = new[] { E_MagMode.N, E_MagMode.S };
-        // playerHasMagTypes.Push(E_MagMode.N);
-        // playerHasMagTypes.Push(E_MagMode.S);
         UpdateHasMagTypes();
+        Messager.Send(new PlayerNeedResetMessage(nowLevelId, rb, transform, this, false, true));
     }
 
     void Update() {
         LookObj();
         CheckAndLockObj();
         if (Input.GetKeyDown(KeyCode.R)) {
+            print("Down");
             Messager.Send(new PlayerNeedResetMessage(nowLevelId, rb, transform, this, false));
         }
     }

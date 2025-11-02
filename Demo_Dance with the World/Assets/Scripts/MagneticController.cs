@@ -51,6 +51,8 @@ public class MagneticController : MonoBehaviour {
     }
 
     private void LevelReset() {
+        print(transform.position);
+        print(initPos);
         SetMagMode(initMagType);
         transform.position = initPos;
         transform.eulerAngles = initRot;

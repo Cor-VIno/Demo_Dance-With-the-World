@@ -33,14 +33,16 @@ public class PlayerNeedResetMessage {
     public readonly Transform PlayerTransform;
     public readonly PlayerMag PlayerMagComponent;
     public readonly bool IsRebirth;
+    public readonly bool IsStart;
 
     public PlayerNeedResetMessage(int levelId, Rigidbody playerRigidbody, Transform playerTransform,
-        PlayerMag playerMagComponent, bool isRebirth) {
+        PlayerMag playerMagComponent, bool isRebirth, bool isStart = false) {
         LevelId = levelId;
         PlayerRigidbody = playerRigidbody;
         PlayerTransform = playerTransform;
         PlayerMagComponent = playerMagComponent;
         IsRebirth = isRebirth;
+        IsStart = isStart;
     }
 }
 
