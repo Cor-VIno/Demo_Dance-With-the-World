@@ -20,6 +20,7 @@ public class CheckPoint : MonoBehaviour {
 
     private void ResetPlayer(PlayerNeedResetMessage message) {
         if (message.LevelId != levelId) {
+            firstGetMagTypes = false;
             return;
         }
 
@@ -43,10 +44,11 @@ public class CheckPoint : MonoBehaviour {
         if (!hasCollision && !isTeleport && player.CompareTag("Player")) {
             if (!firstGetMagTypes) {
                 player.GetComponent<PlayerMag>().InsideReset(playerHasMagTypes);
+                Messager.Send(new DisplayMessage("已设置重生点", 3f));
                 firstGetMagTypes = true;
             }
+
             Messager.Send(new CheckPointMessage(levelId));
-            Messager.Send(new DisplayMessage("已设置重生点", 3f));
             hasCollision = true;
         }
     }

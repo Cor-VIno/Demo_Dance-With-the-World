@@ -939,6 +939,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1122469419}
     m_Modifications:
+    - target: {fileID: 1292873949798175920, guid: 2bc0d1c0bf9d93b48801ad37c5f40168, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4304586789077909614, guid: 2bc0d1c0bf9d93b48801ad37c5f40168, type: 3}
       propertyPath: m_Name
       value: CheckPoint (1)
