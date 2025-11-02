@@ -32,6 +32,9 @@ public class MagneticController : MonoBehaviour
     {
         outline = GetComponent<Outline>();
         rb = GetComponent<Rigidbody>();
+        UpdateColor();
+        UpdateCanMove();
+        Init();
         Messager.Register<LevelResetMessage>(this, message =>
         {
             if (message.LevelId == levelId)
@@ -40,14 +43,6 @@ public class MagneticController : MonoBehaviour
             }
         });
         Messager.Register<SparkMessage>(this, Spark);
-    }
-
-    protected void Start()
-    {
-
-        UpdateColor();
-        UpdateCanMove();
-        Init();
     }
 
     private void Init()
@@ -61,9 +56,7 @@ public class MagneticController : MonoBehaviour
     private void LevelReset()
     {
         SetMagMode(initMagType);
-        print(transform.position);
         transform.position = initPos;
-        print(transform.position);
         transform.eulerAngles = initRot;
         SetCanMove(initCanMove);
         rb.velocity = Vector3.zero;

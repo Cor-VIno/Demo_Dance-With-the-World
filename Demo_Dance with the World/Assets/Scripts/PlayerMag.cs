@@ -73,7 +73,6 @@ public class PlayerMag : MonoBehaviour
     private void FixedUpdate()
     {
         GenerateForce();
-        
     }
 
     private void UpdateHasMagTypes()
