@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Ground Check")]
     public float playerHeight;
     public LayerMask whatIsGround;
+    public LayerMask Magnetometric;
     bool isGrounded;
 
     public Transform orientation;
@@ -260,7 +261,7 @@ public class PlayerMovement : MonoBehaviour
 
     void CheckGrounded()
     {
-        isGrounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround);
+        isGrounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround)|| Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, Magnetometric);
     }
 
     void SetDrag()

@@ -54,8 +54,10 @@ public class PlayerMag : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        playerHasMagTypes.Push(E_MagMode.N);
+        playerHasMagTypes.Push(E_MagMode.S);
         UpdateHasMagTypes();
-        Messager.Send(new PlayerNeedResetMessage(nowLevelId, rb, transform, this, false, true));
+        //Messager.Send(new PlayerNeedResetMessage(nowLevelId, rb, transform, this, false, true));
     }
 
     void Update()
