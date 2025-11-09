@@ -99,18 +99,21 @@ public class PlayerMovement : MonoBehaviour
         }
     }
     //private Coroutine myCoroutine;
+    float h = 0, v = 0;
     void KeyInput()
     {
-        horizontalInput = Input.GetAxis("Horizontal");
-        animator.SetFloat("Direction", horizontalInput);
+        horizontalInput = Input.GetAxisRaw("Horizontal");
+        h = Mathf.Lerp(h, (int)horizontalInput, Time.deltaTime * 10);
+        animator.SetFloat("Direction", h);
         //if (myCoroutine == null)
-            verticalInput = Input.GetAxis("Vertical");
-        if (verticalInput > 0)
-            animator.SetFloat("Speed", Mathf.Min(1, Mathf.Sqrt(verticalInput * verticalInput + horizontalInput * horizontalInput)));
-        else if (verticalInput < 0)
-            animator.SetFloat("Speed", Mathf.Max(-1, -Mathf.Sqrt(verticalInput * verticalInput + horizontalInput * horizontalInput)));
+            verticalInput = Input.GetAxisRaw("Vertical");
+        v = Mathf.Lerp(v, (int)verticalInput, Time.deltaTime * 10);
+        if (v > 0)
+            animator.SetFloat("Speed", Mathf.Min(1, Mathf.Sqrt(v * v + h * h)));
+        else if (v < 0)
+            animator.SetFloat("Speed", Mathf.Max(-1, -Mathf.Sqrt(v * v + h * h)));
         else
-            animator.SetFloat("Speed", -Mathf.Abs(horizontalInput / 2));
+            animator.SetFloat("Speed", -Mathf.Abs(h / 2));
 
         if (Input.GetKey(jumpkey) && readyToJump && isGrounded)
         {
