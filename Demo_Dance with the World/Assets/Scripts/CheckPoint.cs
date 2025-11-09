@@ -7,6 +7,7 @@ using UnityEngine;
 
 public class CheckPoint : MonoBehaviour {
     public int levelId;
+    public bool needGiveMag = true;
     [Header("请按照入栈顺序填写")] public List<E_MagMode> playerHasMagTypes = new(2);
     private bool hasCollision;
     private bool isTeleport;
@@ -27,7 +28,9 @@ public class CheckPoint : MonoBehaviour {
         isTeleport = !message.IsStart;
         message.PlayerRigidbody.velocity = Vector3.zero;
         message.PlayerRigidbody.angularVelocity = Vector3.zero;
-        message.PlayerMagComponent.InsideReset(playerHasMagTypes);
+        if (needGiveMag) {
+            message.PlayerMagComponent.InsideReset(playerHasMagTypes);
+        }
         message.PlayerTransform.position = rebirthPos + new Vector3(0, 1.5f, 0);
         Messager.Send(new LevelResetMessage(levelId));
         if (!message.IsStart) {
@@ -43,7 +46,9 @@ public class CheckPoint : MonoBehaviour {
         var player = other.attachedRigidbody.gameObject;
         if (!hasCollision && !isTeleport && player.CompareTag("Player")) {
             if (!firstGetMagTypes) {
-                player.GetComponent<PlayerMag>().InsideReset(playerHasMagTypes);
+                if (needGiveMag) {
+                    player.GetComponent<PlayerMag>().InsideReset(playerHasMagTypes);
+                }
                 Messager.Send(new DisplayMessage("已设置重生点", 3f));
                 firstGetMagTypes = true;
             }

@@ -4,9 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Geomagnetism : MagneticController {
-    // Start is called before the first frame update
-    new void Start() {
-        levelId = -1;
+     void Start() {
         outline = GetComponent<Outline>();
         rb = GetComponent<Rigidbody>();
         UpdateColor();
