@@ -281,6 +281,10 @@ public class PlayerMag : MonoBehaviour
         nowLevelId = message.LevelId;
     }
 
+    public Stack<E_MagMode> GetPlayerMagTypes() {
+        return new Stack<E_MagMode>(playerHasMagTypes);
+    }
+
     public void Rebirth()
     {
         Messager.Send(new PlayerNeedResetMessage(nowLevelId, rb, transform, this, true));

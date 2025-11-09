@@ -28,9 +28,7 @@ public class CheckPoint : MonoBehaviour {
         isTeleport = !message.IsStart;
         message.PlayerRigidbody.velocity = Vector3.zero;
         message.PlayerRigidbody.angularVelocity = Vector3.zero;
-        if (needGiveMag) {
-            message.PlayerMagComponent.InsideReset(playerHasMagTypes);
-        }
+        message.PlayerMagComponent.InsideReset(playerHasMagTypes);
         message.PlayerTransform.position = rebirthPos + new Vector3(0, 1.5f, 0);
         Messager.Send(new LevelResetMessage(levelId));
         if (!message.IsStart) {
@@ -46,9 +44,18 @@ public class CheckPoint : MonoBehaviour {
         var player = other.attachedRigidbody.gameObject;
         if (!hasCollision && !isTeleport && player.CompareTag("Player")) {
             if (!firstGetMagTypes) {
+                var playerMag = player.GetComponent<PlayerMag>();
                 if (needGiveMag) {
-                    player.GetComponent<PlayerMag>().InsideReset(playerHasMagTypes);
+                    playerMag.InsideReset(playerHasMagTypes);
+                } else {
+                    var temp = playerMag.GetPlayerMagTypes();
+                    playerHasMagTypes.Clear();
+                    while (temp.Count > 0) {
+                        playerHasMagTypes.Add(temp.Pop());
+                    }
+                    playerHasMagTypes.Reverse();
                 }
+
                 Messager.Send(new DisplayMessage("已设置重生点", 3f));
                 firstGetMagTypes = true;
             }
