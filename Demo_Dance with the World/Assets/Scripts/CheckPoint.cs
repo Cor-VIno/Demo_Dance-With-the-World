@@ -21,7 +21,6 @@ public class CheckPoint : MonoBehaviour {
 
     private void ResetPlayer(PlayerNeedResetMessage message) {
         if (message.LevelId != levelId) {
-            firstGetMagTypes = false;
             return;
         }
 

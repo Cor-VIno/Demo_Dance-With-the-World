@@ -54,11 +54,25 @@ public class PlayerMovement_Caps : MonoBehaviour
 
         // Handle drag
         if (maged)
+        {
             rb.drag = magDrag;
+            if (!Input.anyKey)
+            {
+                rb.drag = 50f;
+            }
+                
+        }
         else if (grounded)
+        {
             rb.drag = groundDrag;
+            if (!Input.anyKey)
+            {
+                rb.drag = 50f;
+            }
+        }
         else
             rb.drag = 0;
+
     }
 
     private void FixedUpdate()
