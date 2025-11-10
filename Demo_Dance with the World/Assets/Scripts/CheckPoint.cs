@@ -41,26 +41,26 @@ public class CheckPoint : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other) {
         var player = other.attachedRigidbody.gameObject;
-        if (!hasCollision && !isTeleport && player.CompareTag("Player")) {
-            if (!firstGetMagTypes) {
-                var playerMag = player.GetComponent<PlayerMag>();
-                if (needGiveMag) {
-                    playerMag.InsideReset(playerHasMagTypes);
-                } else {
-                    var temp = playerMag.GetPlayerMagTypes();
-                    playerHasMagTypes.Clear();
-                    while (temp.Count > 0) {
-                        playerHasMagTypes.Add(temp.Pop());
-                    }
-                    playerHasMagTypes.Reverse();
+        if (!hasCollision && !isTeleport && !firstGetMagTypes && player.CompareTag("Player")) {
+            var playerMag = player.GetComponent<PlayerMag>();
+            if (needGiveMag) {
+                playerMag.InsideReset(playerHasMagTypes);
+            } else {
+                var temp = playerMag.GetPlayerMagTypes();
+                playerHasMagTypes.Clear();
+                while (temp.Count > 0) {
+                    playerHasMagTypes.Add(temp.Pop());
                 }
 
-                Messager.Send(new DisplayMessage("已设置重生点", 3f));
-                firstGetMagTypes = true;
+                playerHasMagTypes.Reverse();
             }
+
+            Messager.Send(new DisplayMessage("已设置重生点", 3f));
+
 
             Messager.Send(new CheckPointMessage(levelId));
             hasCollision = true;
+            firstGetMagTypes = true;
         }
     }
 

@@ -11,19 +11,20 @@ public class AudioController : MonoBehaviour {
     void Start() {
         audio = GetComponent<AudioSource>();
         audio.clip = source;
+        audio.loop = true;
         audio.Play();
     }
 
-    void Update() {
-        float[] spectrumData = new float[128];
-        audio.GetSpectrumData(spectrumData, 0, FFTWindow.Rectangular);
-        curTime += Time.deltaTime;
-        if (spectrumData[0] >= 0.48f && curTime >= 0.4f) {
-            Messager.Send(new SparkMessage());
-            curTime = 0;
-        }
-
-        // Debug用
-        // Messager.Send(new VolumnChangedMessage(spectrumData));
-    }
+    // void Update() {
+    //     float[] spectrumData = new float[128];
+    //     audio.GetSpectrumData(spectrumData, 0, FFTWindow.Rectangular);
+    //     curTime += Time.deltaTime;
+    //     if (spectrumData[0] >= 0.48f && curTime >= 0.4f) {
+    //         Messager.Send(new SparkMessage());
+    //         curTime = 0;
+    //     }
+    //
+    //     // Debug用
+    //     // Messager.Send(new VolumnChangedMessage(spectrumData));
+    // }
 }

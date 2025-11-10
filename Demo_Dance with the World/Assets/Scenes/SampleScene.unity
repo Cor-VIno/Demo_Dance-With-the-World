@@ -47608,6 +47608,7 @@ GameObject:
   - component: {fileID: 202064965}
   - component: {fileID: 202064967}
   - component: {fileID: 202064968}
+  - component: {fileID: 202064969}
   m_Layer: 8
   m_Name: Player_Capsule
   m_TagString: Player
@@ -47703,6 +47704,24 @@ MonoBehaviour:
   magneticForceBase: 1.15
   defaultEnergy: 1000
   maxTypeCount: 2
+--- !u!114 &202064969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 202064964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 058db210cdabf204eadcab504305b1a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  getN: {fileID: 8300000, guid: 6cdc04590e0d51e4ab1774586cc7954b, type: 3}
+  getS: {fileID: 8300000, guid: 0dd93657bbd7a13429fb736a42a24c2d, type: 3}
+  attract: {fileID: 8300000, guid: a0e9aa0f82b1604458fd21b92b0a3586, type: 3}
+  repulse: {fileID: 8300000, guid: abdeacdc979be0d4696e230d8334dc20, type: 3}
+  giveMag: {fileID: 8300000, guid: fbfbe482ec231524ea864dfec115b823, type: 3}
+  resetMag: {fileID: 8300000, guid: 08feb6722968edc4c8e4a8b24423433a, type: 3}
 --- !u!1001 &204036057
 PrefabInstance:
   m_ObjectHideFlags: 0

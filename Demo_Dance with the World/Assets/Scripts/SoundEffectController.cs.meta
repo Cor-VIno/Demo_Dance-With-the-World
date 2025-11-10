@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 058db210cdabf204eadcab504305b1a2
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - getN: {fileID: 8300000, guid: 6cdc04590e0d51e4ab1774586cc7954b, type: 3}
+  - getS: {fileID: 8300000, guid: 0dd93657bbd7a13429fb736a42a24c2d, type: 3}
+  - attract: {fileID: 8300000, guid: a0e9aa0f82b1604458fd21b92b0a3586, type: 3}
+  - repulse: {fileID: 8300000, guid: abdeacdc979be0d4696e230d8334dc20, type: 3}
+  - giveMag: {fileID: 8300000, guid: fbfbe482ec231524ea864dfec115b823, type: 3}
+  - resetMag: {fileID: 8300000, guid: 08feb6722968edc4c8e4a8b24423433a, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
