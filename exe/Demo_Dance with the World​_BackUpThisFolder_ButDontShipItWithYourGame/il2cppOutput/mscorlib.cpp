@@ -1651,10 +1651,6 @@ struct UnicodeCategory_tC5D046642FA3366AD265B73F3F43140D8CD9CB2A
 {
 	int32_t ___value__;
 };
-struct BOOL_tF7690F2A2CCFE2678E7F763E31B7F41DE28A89C5 
-{
-	int32_t ___value__;
-};
 struct StateFlags_t43B10B1BFCB28F4E238AF9DED5F71715EEFD6CEE 
 {
 	int32_t ___value__;
@@ -1862,12 +1858,6 @@ struct Context_tD15AE54D147D83573FFCE185D3D3A64A3C75E7BE
 	uint8_t* ___Buffer2;
 	int32_t ___PrevCode;
 	uint8_t* ___PrevSortKey;
-};
-struct SECURITY_ATTRIBUTES_t52F010063D5470F5CC695E87D1A9AC4632CED64F 
-{
-	uint32_t ___nLength;
-	intptr_t ___lpSecurityDescriptor;
-	int32_t ___bInheritHandle;
 };
 struct Comparison_1_t9348BD07A42E0B64874D56D54EB3C5984E623BCE  : public MulticastDelegate_t
 {
@@ -2652,11 +2642,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t BCrypt_BCryptGenRandom_mD6BF995AB9D8
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OutOfMemoryException__ctor_m2CDADA05A6304090686E8D5E3E99A1596FAF5951 (OutOfMemoryException_tE6DC2F937EC4A8699271D5151C4DF83BDE99EE7F* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InvalidOperationException__ctor_m1BE9BD198B904AA1D94F4B10DA88077DFD44B7A5 (InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafeLibraryHandle__ctor_m3D033C124BDF67924DC1C71AB17F5377B2223996 (SafeLibraryHandle_t72AE86F4E8EF15BF14A3BF38199005108E0A0295* __this, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PathInternal_EnsureExtendedPrefix_m353F7DE7912D0FE91F76602A8E7970BDFC6F2279 (String_t* ___0_path, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Kernel32_CreateDirectoryPrivate_m1613F80DBD6BCF6784F6795179D2F0C474C29E10 (String_t* ___0_path, SECURITY_ATTRIBUTES_t52F010063D5470F5CC695E87D1A9AC4632CED64F* ___1_lpSecurityAttributes, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PathInternal_EnsureExtendedPrefixIfNeeded_m21B2789AA85AA22861D01CABB704013F5E2103D3 (String_t* ___0_path, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Kernel32_DeleteFilePrivate_mDE9FB01E3DF1A7524D33AC4EFAAD7CBE2B1A37CE (String_t* ___0_path, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafeFindHandle__ctor_mBA854A78EF048713F0E5854F18EE036936A378AB (SafeFindHandle_t3DD1D95C2F73C2D4F7F5DADC54024FD982FBE7E1* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PathInternal_EnsureExtendedPrefixIfNeeded_m21B2789AA85AA22861D01CABB704013F5E2103D3 (String_t* ___0_path, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR SafeFindHandle_t3DD1D95C2F73C2D4F7F5DADC54024FD982FBE7E1* Kernel32_FindFirstFileExPrivate_m7158DB3121E65EE63B48D5F84F330A2DDE885F31 (String_t* ___0_lpFileName, uint32_t ___1_fInfoLevelId, WIN32_FIND_DATA_t0A641A00D0B2241B84A2B556D57E9A741B499A0A* ___2_lpFindFileData, uint32_t ___3_fSearchOp, intptr_t ___4_lpSearchFilter, int32_t ___5_dwAdditionalFlags, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Kernel32_GetMessage_m5B2C3FD60759E5FF8997265B4A98BAAF09D28D8B (intptr_t ___0_moduleHandle, int32_t ___1_errorCode, const RuntimeMethod* method) ;
 inline void Span_1__ctor_m835590E344B05AF6AF00A78E92C4175BD781A3D2_inline (Span_1_tEDDF15FCF9EC6DEBA0F696BAACDDBAB9D92C252D* __this, void* ___0_pointer, int32_t ___1_length, const RuntimeMethod* method)
@@ -3271,12 +3258,6 @@ IL2CPP_EXTERN_C uint32_t DEFAULT_CALL GetDynamicTimeZoneInformation(TIME_DYNAMIC
 IL2CPP_EXTERN_C uint32_t DEFAULT_CALL GetTimeZoneInformation(TIME_ZONE_INFORMATION_tF749E0DC737FF8A4C16BFD9FEA530A0D4F5A29A5*);
 #endif
 #if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_kernel32_INTERNAL
-IL2CPP_EXTERN_C int32_t DEFAULT_CALL CreateDirectoryW(Il2CppChar*, SECURITY_ATTRIBUTES_t52F010063D5470F5CC695E87D1A9AC4632CED64F*);
-#endif
-#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_kernel32_INTERNAL
-IL2CPP_EXTERN_C int32_t DEFAULT_CALL DeleteFileW(Il2CppChar*);
-#endif
-#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_kernel32_INTERNAL
 IL2CPP_EXTERN_C void* DEFAULT_CALL FindFirstFileExW(Il2CppChar*, uint32_t, WIN32_FIND_DATA_t0A641A00D0B2241B84A2B556D57E9A741B499A0A*, uint32_t, intptr_t, int32_t);
 #endif
 #if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_kernel32_INTERNAL
@@ -3517,103 +3498,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t Kernel32_GetTimeZoneInformation_m4E9
 	il2cpp_codegen_marshal_store_last_error();
 
 	return returnValue;
-}
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Kernel32_CreateDirectoryPrivate_m1613F80DBD6BCF6784F6795179D2F0C474C29E10 (String_t* ___0_path, SECURITY_ATTRIBUTES_t52F010063D5470F5CC695E87D1A9AC4632CED64F* ___1_lpSecurityAttributes, const RuntimeMethod* method) 
-{
-	typedef int32_t (DEFAULT_CALL *PInvokeFunc) (Il2CppChar*, SECURITY_ATTRIBUTES_t52F010063D5470F5CC695E87D1A9AC4632CED64F*);
-	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_kernel32_INTERNAL
-	static PInvokeFunc il2cppPInvokeFunc;
-	if (il2cppPInvokeFunc == NULL)
-	{
-		int parameterSize = sizeof(Il2CppChar*) + sizeof(SECURITY_ATTRIBUTES_t52F010063D5470F5CC695E87D1A9AC4632CED64F*);
-		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("kernel32.dll"), "CreateDirectoryW", IL2CPP_CALL_DEFAULT, CHARSET_UNICODE, parameterSize, false);
-		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
-	}
-	#endif
-
-	Il2CppChar* ____0_path_marshaled = NULL;
-	if (___0_path != NULL)
-	{
-		____0_path_marshaled = &___0_path->____firstChar;
-	}
-
-	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_kernel32_INTERNAL
-	int32_t returnValue = reinterpret_cast<PInvokeFunc>(CreateDirectoryW)(____0_path_marshaled, ___1_lpSecurityAttributes);
-	#else
-	int32_t returnValue = il2cppPInvokeFunc(____0_path_marshaled, ___1_lpSecurityAttributes);
-	#endif
-	il2cpp_codegen_marshal_store_last_error();
-
-	return static_cast<bool>(returnValue);
-}
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Kernel32_CreateDirectory_m2009737CA2B46B09666E6C7DE934DB39D0D263B7 (String_t* ___0_path, SECURITY_ATTRIBUTES_t52F010063D5470F5CC695E87D1A9AC4632CED64F* ___1_lpSecurityAttributes, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&PathInternal_t40910AF78E21C3A6C83D095423B3EADE9AC5261C_il2cpp_TypeInfo_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		String_t* L_0 = ___0_path;
-		il2cpp_codegen_runtime_class_init_inline(PathInternal_t40910AF78E21C3A6C83D095423B3EADE9AC5261C_il2cpp_TypeInfo_var);
-		String_t* L_1;
-		L_1 = PathInternal_EnsureExtendedPrefix_m353F7DE7912D0FE91F76602A8E7970BDFC6F2279(L_0, NULL);
-		___0_path = L_1;
-		String_t* L_2 = ___0_path;
-		SECURITY_ATTRIBUTES_t52F010063D5470F5CC695E87D1A9AC4632CED64F* L_3 = ___1_lpSecurityAttributes;
-		bool L_4;
-		L_4 = Kernel32_CreateDirectoryPrivate_m1613F80DBD6BCF6784F6795179D2F0C474C29E10(L_2, L_3, NULL);
-		return L_4;
-	}
-}
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Kernel32_DeleteFilePrivate_mDE9FB01E3DF1A7524D33AC4EFAAD7CBE2B1A37CE (String_t* ___0_path, const RuntimeMethod* method) 
-{
-	typedef int32_t (DEFAULT_CALL *PInvokeFunc) (Il2CppChar*);
-	#if !FORCE_PINVOKE_INTERNAL && !FORCE_PINVOKE_kernel32_INTERNAL
-	static PInvokeFunc il2cppPInvokeFunc;
-	if (il2cppPInvokeFunc == NULL)
-	{
-		int parameterSize = sizeof(Il2CppChar*);
-		il2cppPInvokeFunc = il2cpp_codegen_resolve_pinvoke<PInvokeFunc>(IL2CPP_NATIVE_STRING("kernel32.dll"), "DeleteFileW", IL2CPP_CALL_DEFAULT, CHARSET_UNICODE, parameterSize, false);
-		IL2CPP_ASSERT(il2cppPInvokeFunc != NULL);
-	}
-	#endif
-
-	Il2CppChar* ____0_path_marshaled = NULL;
-	if (___0_path != NULL)
-	{
-		____0_path_marshaled = &___0_path->____firstChar;
-	}
-
-	#if FORCE_PINVOKE_INTERNAL || FORCE_PINVOKE_kernel32_INTERNAL
-	int32_t returnValue = reinterpret_cast<PInvokeFunc>(DeleteFileW)(____0_path_marshaled);
-	#else
-	int32_t returnValue = il2cppPInvokeFunc(____0_path_marshaled);
-	#endif
-	il2cpp_codegen_marshal_store_last_error();
-
-	return static_cast<bool>(returnValue);
-}
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Kernel32_DeleteFile_m359CB6032D82B657B919500A5FE5B8A6FB022CF1 (String_t* ___0_path, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&PathInternal_t40910AF78E21C3A6C83D095423B3EADE9AC5261C_il2cpp_TypeInfo_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		String_t* L_0 = ___0_path;
-		il2cpp_codegen_runtime_class_init_inline(PathInternal_t40910AF78E21C3A6C83D095423B3EADE9AC5261C_il2cpp_TypeInfo_var);
-		String_t* L_1;
-		L_1 = PathInternal_EnsureExtendedPrefixIfNeeded_m21B2789AA85AA22861D01CABB704013F5E2103D3(L_0, NULL);
-		___0_path = L_1;
-		String_t* L_2 = ___0_path;
-		bool L_3;
-		L_3 = Kernel32_DeleteFilePrivate_mDE9FB01E3DF1A7524D33AC4EFAAD7CBE2B1A37CE(L_2, NULL);
-		return L_3;
-	}
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR SafeFindHandle_t3DD1D95C2F73C2D4F7F5DADC54024FD982FBE7E1* Kernel32_FindFirstFileExPrivate_m7158DB3121E65EE63B48D5F84F330A2DDE885F31 (String_t* ___0_lpFileName, uint32_t ___1_fInfoLevelId, WIN32_FIND_DATA_t0A641A00D0B2241B84A2B556D57E9A741B499A0A* ___2_lpFindFileData, uint32_t ___3_fSearchOp, intptr_t ___4_lpSearchFilter, int32_t ___5_dwAdditionalFlags, const RuntimeMethod* method) 
 {
@@ -4429,14 +4313,6 @@ IL2CPP_EXTERN_C  String_t* TIME_ZONE_INFORMATION_GetDaylightName_mA271FA71E881FC
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WIN32_FILE_ATTRIBUTE_DATA_PopulateFrom_mFDC867C91453AA607FDF9D1E478D09FB8B462958 (WIN32_FILE_ATTRIBUTE_DATA_tD093F8658579DA72CCD2E158A681DDE37834F73B* __this, WIN32_FIND_DATA_t0A641A00D0B2241B84A2B556D57E9A741B499A0A* ___0_findData, const RuntimeMethod* method) 
 {
 	{
@@ -4553,14 +4429,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t User32_LoadString_m4998218D8C8F8C9DD6
 
 	return returnValue;
 }
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
@@ -30966,15 +30834,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool String_Contains_m6D77B121FADA7CA5F397C0F
 		int32_t L_1;
 		L_1 = String_IndexOf_m490810CB7ADA9230AC0F8D78E213A8EFED129F55(__this, L_0, 4, NULL);
 		return (bool)((((int32_t)((((int32_t)L_1) < ((int32_t)0))? 1 : 0)) == ((int32_t)0))? 1 : 0);
-	}
-}
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool String_Contains_mC67F1B9E92187E2BB125A560160DA30A5BA703F2 (String_t* __this, Il2CppChar ___0_value, const RuntimeMethod* method) 
-{
-	{
-		Il2CppChar L_0 = ___0_value;
-		int32_t L_1;
-		L_1 = String_IndexOf_mE21E78F35EF4A7768E385A72814C88D22B689966(__this, L_0, NULL);
-		return (bool)((((int32_t)((((int32_t)L_1) == ((int32_t)(-1)))? 1 : 0)) == ((int32_t)0))? 1 : 0);
 	}
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t String_IndexOf_mE21E78F35EF4A7768E385A72814C88D22B689966 (String_t* __this, Il2CppChar ___0_value, const RuntimeMethod* method) 

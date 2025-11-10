@@ -10,12 +10,15 @@ ScriptsOnlyBuild:
     - Geomagnetism
     - MagneticController
     - Messager
+    - MoveCamera
     - Outline
     - PlayerCam
+    - PlayerCam_Capsule
     - PlayerMag
     - PlayerMagTypeController
     - PlayerMagTypesController
     - PlayerMovement
+    - PlayerMovement_Caps
     - UnityChan.AutoBlink
     - UnityChan.FaceUpdate
     - UnityChan.IKCtrlRightHand
@@ -41,12 +44,7 @@ ScriptsOnlyBuild:
     - UnityEngine.Rendering.PostProcessing.ScreenSpaceReflections
     - UnityEngine.Rendering.PostProcessing.Vignette
     Unity.ProBuilder.Editor.dll:
-    - UnityEditor.ProBuilder.DrawShapeTool
     - UnityEditor.ProBuilder.ProBuilderEditor
-    - UnityEditor.ProBuilder.ProBuilderShapeEditor
-    Unity.ProBuilder.dll:
-    - UnityEngine.ProBuilder.ProBuilderMesh
-    - UnityEngine.ProBuilder.Shapes.ProBuilderShape
     Unity.RenderPipelines.Core.Runtime:
     - UnityEngine.Rendering.UI.DebugUIHandlerBitField
     - UnityEngine.Rendering.UI.DebugUIHandlerButton
@@ -155,13 +153,6 @@ ScriptsOnlyBuild:
     - UnityEngine.Rendering.PostProcessing.TextureParameter
     - UnityEngine.Rendering.PostProcessing.VectorscopeMonitor
     - UnityEngine.Rendering.PostProcessing.WaveformMonitor
-    Unity.ProBuilder:
-    - UnityEngine.ProBuilder.AutoUnwrapSettings
-    - UnityEngine.ProBuilder.Face
-    - UnityEngine.ProBuilder.Shapes.Cube
-    - UnityEngine.ProBuilder.Shapes.Door
-    - UnityEngine.ProBuilder.SharedVertex
-    - UnityEngine.ProBuilder.UnwrapParameters
     Unity.RenderPipelines.Core.Runtime:
     - UnityEngine.Rendering.UI.DebugUIPrefabBundle
     Unity.TextMeshPro:
@@ -402,69 +393,71 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 24186}
     - Class: 114
-      Script: {instanceID: 24256}
-    - Class: 114
       Script: {instanceID: 24372}
     - Class: 114
-      Script: {instanceID: 25062}
+      Script: {instanceID: 24596}
     - Class: 114
-      Script: {instanceID: 25090}
+      Script: {instanceID: 25064}
     - Class: 114
-      Script: {instanceID: 25120}
+      Script: {instanceID: 25092}
     - Class: 114
-      Script: {instanceID: 25128}
+      Script: {instanceID: 25122}
     - Class: 114
-      Script: {instanceID: 25392}
+      Script: {instanceID: 25130}
     - Class: 114
-      Script: {instanceID: 25494}
+      Script: {instanceID: 25394}
     - Class: 114
-      Script: {instanceID: 25628}
+      Script: {instanceID: 25496}
     - Class: 114
-      Script: {instanceID: 25756}
+      Script: {instanceID: 25630}
     - Class: 114
-      Script: {instanceID: 25784}
+      Script: {instanceID: 25758}
     - Class: 114
-      Script: {instanceID: 25832}
+      Script: {instanceID: 25786}
     - Class: 114
-      Script: {instanceID: 26176}
+      Script: {instanceID: 25834}
     - Class: 114
-      Script: {instanceID: 26476}
+      Script: {instanceID: 26478}
     - Class: 114
-      Script: {instanceID: 26534}
+      Script: {instanceID: 26536}
     - Class: 114
-      Script: {instanceID: 26728}
+      Script: {instanceID: 26730}
     - Class: 114
-      Script: {instanceID: 26794}
+      Script: {instanceID: 26796}
     - Class: 114
-      Script: {instanceID: 26978}
+      Script: {instanceID: 26980}
     - Class: 114
-      Script: {instanceID: 27278}
+      Script: {instanceID: 27144}
     - Class: 114
-      Script: {instanceID: 27324}
+      Script: {instanceID: 27282}
     - Class: 114
-      Script: {instanceID: 27420}
+      Script: {instanceID: 27328}
     - Class: 114
-      Script: {instanceID: 27496}
+      Script: {instanceID: 27424}
     - Class: 114
-      Script: {instanceID: 27508}
+      Script: {instanceID: 27494}
     - Class: 114
-      Script: {instanceID: 27602}
+      Script: {instanceID: 27502}
     - Class: 114
-      Script: {instanceID: 27688}
+      Script: {instanceID: 27514}
     - Class: 114
-      Script: {instanceID: 27736}
+      Script: {instanceID: 27608}
     - Class: 114
-      Script: {instanceID: 27890}
+      Script: {instanceID: 27694}
     - Class: 114
-      Script: {instanceID: 27930}
+      Script: {instanceID: 27742}
     - Class: 114
-      Script: {instanceID: 28164}
+      Script: {instanceID: 27896}
     - Class: 114
-      Script: {instanceID: 28510}
+      Script: {instanceID: 27936}
     - Class: 114
-      Script: {instanceID: 29038}
+      Script: {instanceID: 28170}
     - Class: 114
-      Script: {instanceID: 29132}
+      Script: {instanceID: 28516}
+    - Class: 114
+      Script: {instanceID: 29044}
+    - Class: 114
+      Script: {instanceID: 29138}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1724,6 +1717,12 @@ ScriptsOnlyBuild:
     className: BezierShape
   - hash:
       serializedVersion: 2
+      Hash: 813802a92b69208a1833aca7382af707
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: PlayerCam_Capsule
+  - hash:
+      serializedVersion: 2
       Hash: a1ac4c50e55874de16eee3db71aa9784
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
@@ -2138,6 +2137,12 @@ ScriptsOnlyBuild:
     className: UIFoldout
   - hash:
       serializedVersion: 2
+      Hash: ac8eaeaa9091f1b9ed2c7ae20c9f5271
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: PlayerMovement_Caps
+  - hash:
+      serializedVersion: 2
       Hash: 33656f83bb0079184b2206a69690ec46
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
@@ -2172,6 +2177,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualEffectGraph.Runtime
     namespaceName: UnityEngine.VFX
     className: VFXRuntimeResources
+  - hash:
+      serializedVersion: 2
+      Hash: 7f8b5cc4205dbc59dd8df6a875f91a12
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: MoveCamera
   - hash:
       serializedVersion: 2
       Hash: 9104447b683bf70406fa01f12ecb564a
