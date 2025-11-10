@@ -8352,31 +8352,40 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerMovement_Caps_MyInput_m974C99E0358
 		L_3 = Input_GetKey_mE5681EF775F3CEBA7EAD7C63984F7B34C8E8D434(L_2, NULL);
 		if (!L_3)
 		{
-			goto IL_005b;
+			goto IL_0063;
 		}
 	}
 	{
 		bool L_4 = __this->___readyToJump;
 		if (!L_4)
 		{
-			goto IL_005b;
+			goto IL_0063;
 		}
 	}
 	{
 		bool L_5 = __this->___grounded;
-		if (!L_5)
+		if (L_5)
 		{
-			goto IL_005b;
+			goto IL_0045;
 		}
 	}
 	{
-		__this->___readyToJump = (bool)0;
-		PlayerMovement_Caps_Jump_m106AAEF7B2E5A7301B659D429260501EE98467A8(__this, NULL);
-		float L_6 = __this->___jumpCooldown;
-		MonoBehaviour_Invoke_mF724350C59362B0F1BFE26383209A274A29A63FB(__this, _stringLiteral4A51FEA0B402E9185036965179CA7459F97213BF, L_6, NULL);
+		bool L_6 = __this->___maged;
+		if (!L_6)
+		{
+			goto IL_0063;
+		}
 	}
 
-IL_005b:
+IL_0045:
+	{
+		__this->___readyToJump = (bool)0;
+		PlayerMovement_Caps_Jump_m106AAEF7B2E5A7301B659D429260501EE98467A8(__this, NULL);
+		float L_7 = __this->___jumpCooldown;
+		MonoBehaviour_Invoke_mF724350C59362B0F1BFE26383209A274A29A63FB(__this, _stringLiteral4A51FEA0B402E9185036965179CA7459F97213BF, L_7, NULL);
+	}
+
+IL_0063:
 	{
 		return;
 	}

@@ -53,7 +53,7 @@ public class PlayerMovement_Caps : MonoBehaviour
 
 
         // Handle drag
-        if(maged)
+        if (maged)
             rb.drag = magDrag;
         else if (grounded)
             rb.drag = groundDrag;
@@ -90,7 +90,7 @@ public class PlayerMovement_Caps : MonoBehaviour
         verticalInput = Input.GetAxisRaw("Vertical");
 
         // Jump
-        if (Input.GetKey(jumpKey) && readyToJump && grounded)
+        if (Input.GetKey(jumpKey) && readyToJump && (grounded || maged))
         {
             readyToJump = false;
             Jump();
@@ -103,7 +103,7 @@ public class PlayerMovement_Caps : MonoBehaviour
         // Calculate movement direction
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
         // Move the player
-        if (grounded||maged)
+        if (grounded || maged)
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
         else
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f * airMultiplier, ForceMode.Force);
